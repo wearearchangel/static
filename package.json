@@ -1,0 +1,13 @@
+{
+  "name": "@wearearchangel/static",
+  "version": "1.0.0",
+  "description": "Handcrafted Design System — CSS baseline, tokens, and static assets",
+  "license": "MIT",
+  "files": ["styles/"],
+  "exports": {
+    "./tokens": "./styles/tokens.css",
+    "./main": "./styles/main.css",
+    "./main.tailwind": "./styles/main.tailwind.css",
+    "./styles/*": "./styles/*"
+  }
+}

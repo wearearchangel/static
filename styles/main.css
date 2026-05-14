@@ -1,0 +1,94 @@
+@import 'https://static.wearearchangel.com/styles/reset.vanilla.css';
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('https://static.wearearchangel.com/fonts/mona-sans.woff2') format('woff2 supports variations'),
+  url('https://static.wearearchangel.com/fonts/mona-sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+@font-face {
+  font-family: 'Hubot Sans';
+  src:
+    url('https://static.wearearchangel.com/fonts/hubot-sans.woff2') format('woff2 supports variations'),
+    url('https://static.wearearchangel.com/fonts/hubot-sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+:root {
+  color-scheme: light dark;
+
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --font-display: "Hubot Sans", "Hubot SansHeaderFallback", var(--font-system);
+  --font-sans: "Mona Sans", "MonaSansFallback", var(--font-system);
+
+  --font-title: 1.5rem/1.1 var(--font-display);
+  --font-text: 1rem/1.5 var(--font-sans);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text:          #333b3c;
+    --color-text-2:        darkslategray;
+    --color-title:         black;
+    --color-background:    #efedea;
+    --color-background-2:  white;
+    --color-link:          #1a56db;
+    --color-link-alt:      #1040b0;
+    --color-border:        #c8c4ba;
+    --color-border-muted:  #dddbd2;
+    --color-tint:          #f5f3ef;
+    --color-dim:           #eceae5;
+    --color-primary:       #aad56a;
+    --color-on-primary:    #222222;
+    --color-secondary:     #222222;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text:          #efefec;
+    --color-text-2:        lightgray;
+    --color-title:         white;
+    --color-background:    #223a2c;
+    --color-background-2:  black;
+    --color-link:          #7eb3f8;
+    --color-link-alt:      #aecffa;
+    --color-border:        #4a6741;
+    --color-border-muted:  #3a5233;
+    --color-tint:          #1c3023;
+    --color-dim:           #182a1e;
+    --color-primary:       #aad56a;
+    --color-on-primary:    #222222;
+    --color-secondary:     #ffffff;
+  }
+}
+
+html {
+  font: 16px/1.3 var(--font-sans);
+  font-feature-settings: normal;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+main {
+  font: var(--font-text);
+  color: var(--color-text-2);
+  background-color: var(--color-background-2);
+}
+
+h1 {
+  font: var(--font-title);
+  color: var(--color-title);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
