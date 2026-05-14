@@ -6,26 +6,41 @@ This document outlines the architecture, philosophy, and implementation details 
 
 The Handcrafted Design System is built on several core principles:
 
-1.  **Minimalist Baseline**: It provides a clean, minimal starting point for web projects, covering typography, resets, and basic element styling without imposing a heavy visual weight.
+1.  **Minimalist Baseline**: It provides a clean, minimal starting point for web projects, covering typography, resets, and basic element styling.
 2.  **Semantic & Extensible**: We use semantic CSS custom properties (tokens) that are easy to understand and override.
 3.  **Modern Defaults**: Leverages modern CSS features like variable fonts (Mona Sans & Hubot Sans) and `prefers-color-scheme` for built-in light/dark mode support.
 4.  **Framework Agnostic & Tailwind Friendly**: It works as a standalone CSS baseline or as a foundation for Tailwind v4 projects.
 
-## Architecture
+## Architecture: ITCSS
 
-The system is organized into layers:
+The codebase is organized according to the **Inverted Triangle CSS (ITCSS)** methodology. This helps in managing CSS specificity and ensures that the system is scalable and easy to maintain.
 
-### 1. Reset Layer
-Managed by `styles/reset.vanilla.css` (or `reset.normalize.css`). It removes browser inconsistencies and sets a solid foundation.
+### 1. Settings
+The "Settings" layer contains global variables, design tokens, and configuration.
+-   **File**: `styles/tokens.css`
+-   Contains: Brand colors, typography settings, and the Tailwind v4 `@theme` block.
 
-### 2. Token Layer
-Defined in `styles/tokens.css`. This layer contains all the design constants:
--   **Colors**: Semantic tokens for text, backgrounds, borders, and brand colors.
--   **Typography**: Font families and scales using variable fonts.
--   The Token layer also includes the Tailwind v4 `@theme` block, mapping our tokens to Tailwind utilities.
+### 2. Tools
+(Currently minimal) This layer is for mixins and functions.
 
-### 3. Base Layer
-Defined in `styles/main.css` (and via `@layer base` in Tailwind). This layer applies the tokens to raw HTML elements like `<body>`, `<h1>`, `<a>`, and `<button>`.
+### 3. Generic
+The "Generic" layer is for ground-zero styles, including resets and normalization.
+-   **Files**: `styles/reset.vanilla.css` and `styles/reset.normalize.css`
+-   Contains: Low-specificity rules that remove browser defaults.
+
+### 4. Base
+The "Base" layer styles unclassed HTML elements.
+-   **File**: `styles/main.css` (Base rules applied after Generic imports).
+-   Contains: Styles for `<body>`, `<h1>` to `<h6>`, `<a>`, `<blockquote>`, etc.
+
+### 5. Objects
+(Planned) This layer will contain class-based, non-cosmetic design patterns (e.g., layout grids).
+
+### 6. Components
+(Planned) This layer will contain designed UI components (e.g., cards, buttons with specific variants).
+
+### 7. Utilities
+High-specificity helper classes. When using Tailwind v4 (`styles/main.tailwind.css`), this layer is automatically generated based on the settings in `styles/tokens.css`.
 
 ## Token System Overview
 
@@ -44,22 +59,7 @@ The system uses two main variable fonts:
 ## Usage
 
 ### Standard CSS
-Include `styles/main.css` in your project. It imports the reset and applies the baseline styles.
-
-```html
-<link rel="stylesheet" href="https://static.wearearchangel.com/styles/main.css">
-```
+Include `styles/main.css` in your project. It imports the reset and applies the baseline styles following the ITCSS order.
 
 ### Tailwind v4
-Use `styles/main.tailwind.css` as your CSS entry point. This imports Tailwind and registers the design system tokens.
-
-```css
-@import "styles/main.tailwind.css";
-```
-
-## Future Considerations
-
-Refer to `TODO.md` for planned improvements, including:
--   Standardizing font-size, spacing, and border-radius scales.
--   Adding semantic status colors (success, error, warning, info).
--   Developing a base component layer for common UI patterns like cards and badges.
+Use `styles/main.tailwind.css` as your CSS entry point. It registers the design system tokens in the Tailwind theme.
