@@ -1,0 +1,16 @@
+# Company assets — not for public repo
+company/
+
+# Dependencies
+node_modules/
+
+# Large media — too large for GitHub (served from CDN)
+*.m4v
+
+# Unused fonts — only Mona Sans and Hubot Sans are part of the design system
+fonts/Geist*.woff2
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('https://static.wearearchangel.com/fonts/mona-sans.woff2') format('woff2 supports variations'),
+    url('https://static.wearearchangel.com/fonts/mona-sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+@font-face {
+  font-family: 'Hubot Sans';
+  src:
+    url('https://static.wearearchangel.com/fonts/hubot-sans.woff2') format('woff2 supports variations'),
+    url('https://static.wearearchangel.com/fonts/hubot-sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+/* Internal variables - structural helpers, not utility-generating */
+:root {
+  color-scheme: light dark;
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-title:  1.5rem/1.1 var(--font-display);
+  --font-text:   1rem/1.5 var(--font-sans);
+}
+
+/*
+  @theme - registers design system tokens as CSS custom properties on :root
+  AND as Tailwind utility generators (bg-*, text-*, border-*, font-*, etc.).
+  Light-mode values are the defaults; dark mode overrides via @media below.
+*/
+@theme {
+  /* Clear Tailwind's built-in color palette - only semantic tokens exist */
+  --color-*: initial;
+
+  /* Font families → font-sans, font-display, font-mono utilities */
+  --font-mono:    ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --font-display: "Hubot Sans", "Hubot SansHeaderFallback", var(--font-system);
+  --font-sans:    "Mona Sans", "MonaSansFallback", var(--font-system);
+
+  /* Text */
+  --color-text:          #333b3c;
+  --color-text-2:        darkslategray;
+  --color-title:         black;
+
+  /* Surfaces */
+  --color-background:    #efedea;
+  --color-background-2:  white;
+  --color-tint:          #f5f3ef;
+  --color-dim:           #eceae5;
+
+  /* Borders */
+  --color-border:        #c8c4ba;
+  --color-border-muted:  #dddbd2;
+
+  /* Links */
+  --color-link:          #1a56db;
+  --color-link-alt:      #1040b0;
+
+  /* Brand */
+  --color-primary:       #aad56a;
+  --color-on-primary:    #222222;
+  --color-secondary:     #222222;
+}
+
+/* Dark mode - overrides the @theme values on :root */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text:          #efefec;
+    --color-text-2:        lightgray;
+    --color-title:         white;
+    --color-background:    #223a2c;
+    --color-background-2:  black;
+    --color-tint:          #1c3023;
+    --color-dim:           #182a1e;
+    --color-border:        #4a6741;
+    --color-border-muted:  #3a5233;
+    --color-link:          #7eb3f8;
+    --color-link-alt:      #aecffa;
+    --color-primary:       #aad56a;
+    --color-on-primary:    #222222;
+    --color-secondary:     #ffffff;
+  }
+}
+
+/* Brand element baseline - restores design system intent over Preflight */
+@layer base {
+  html {
+    font: 16px/1.3 var(--font-sans);
+    font-feature-settings: normal;
+  }
+
+  body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+
+  main {
+    font: var(--font-text);
+    color: var(--color-text-2);
+    background-color: var(--color-background-2);
+  }
+
+  h1 {
+    font: var(--font-title);
+    color: var(--color-title);
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-title);
+  }
+
+  a,
+  a:visited {
+    color: var(--color-link);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--color-link-alt);
+  }
+
+  button {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+}
