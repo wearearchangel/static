@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Handcrafted Design System — CSS baseline, tokens, and static assets",
   "license": "MIT",
-  "files": ["styles/"],
+  "files": ["styles/", "manifest/"],
   "exports": {
     "./tokens": "./styles/tokens.css",
     "./main": "./styles/main.css",
