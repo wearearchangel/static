@@ -61,6 +61,7 @@
   --color-primary:       #aad56a;
   --color-on-primary:    #222222;
   --color-secondary:     #222222;
+  --color-on-secondary:   #c0c0c0;
 }
 
 /* Dark mode - overrides the @theme values on :root */
@@ -80,6 +81,7 @@
     --color-primary:       #aad56a;
     --color-on-primary:    #222222;
     --color-secondary:     #ffffff;
+    --color-on-secondary:   #4b4b4b;
   }
 }
 
@@ -98,7 +100,7 @@
   main {
     font: var(--font-text);
     color: var(--color-text-2);
-    background-color: var(--color-background-2);
+    /*background-color: var(--color-background-2);*/
   }
 
   h1 {
@@ -111,17 +113,11 @@
     color: var(--color-title);
   }
 
-  a,
-  a:visited {
-    color: var(--color-link);
-  }
-
-  a:hover,
-  a:focus {
-    color: var(--color-link-alt);
-  }
-
-  button {
+  button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  input[type="file"]::file-selector-button {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
   }

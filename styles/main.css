@@ -82,7 +82,7 @@ body {
 main {
   font: var(--font-text);
   color: var(--color-text-2);
-  background-color: var(--color-background-2);
+  /*background-color: var(--color-background-2);*/
 }
 
 h1 {
@@ -90,7 +90,16 @@ h1 {
   color: var(--color-title);
 }
 
-button {
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-title);
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="file"]::file-selector-button {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
 }

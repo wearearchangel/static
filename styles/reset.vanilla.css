@@ -36,6 +36,11 @@ time, mark, audio, video {
   --color-border-muted:  #c5d5e8;
   --color-tint:          aliceblue;
   --color-dim:           whitesmoke;
+
+  --field: #f0f4f8;
+  --fieldtext: #1a202c;
+  --field-focus-background-color: var(--color-tint);
+  --field-focus-border-color: var(--color-link);
 }
 
 /* Typography */
@@ -45,7 +50,7 @@ body {
   padding: 0;
 }
 
-body, input {
+body {
   font: var(--text-lg) -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -115,12 +120,14 @@ blockquote, q {
   padding: 1rem;
 }
 
-blockquote p:first-child {
-  margin-top: 0;
-}
+blockquote p {
+  &:first-child {
+    margin-top: 0;
+  }
 
-blockquote p:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 cite {
@@ -154,14 +161,16 @@ hr {
   margin: 4rem 0;
 }
 
-img {
+img, video {
   display: block;
+  border-radius: var(--border-radius);
   height: auto;
   max-width: 100%;
 }
 
 figure {
   border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
   display: inline-block;
   padding: 1rem;
   width: 100%;
@@ -201,6 +210,7 @@ dl dd {
 
 table {
   border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
   border-collapse: collapse;
   table-layout: fixed;
   text-align: left;
@@ -233,17 +243,418 @@ table th, table td {
   padding: 0.5rem;
 }
 
-input {
-  appearance: none;
-  border: 1px solid var(--color-text);
-  display: block;
+input,
+textarea,
+select,
+[contenteditable="true"] {
   margin: 0.5rem 0;
-  padding: 0.8rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--field);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--fieldtext);
 }
 
-input:focus, input:active {
-  background-color: var(--color-tint);
-  border-color: var(--color-link);
+input:focus, input:active,
+textarea:focus, textarea:active,
+select:focus, select:active {
+  background-color: var(--field-focus-background-color);
+  border-color: var(--field-focus-border-color);
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  font: inherit;
+  margin: 0.5rem 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  background-color: var(--field);
+  display: inline-block;
+  height: 1.5rem;
+  margin: 0 0.25rem 0 0;
+  overflow: hidden;
+  padding: 0;
+  vertical-align: middle;
+  width: 1.5rem;
+}
+
+input[type="checkbox"] {
+  &:checked::after {
+    background-color: var(--fieldtext);
+    color: var(--field);
+    content: '✓';
+    display: block;
+    font: inherit;
+    line-height: calc(1.5rem - 1px);
+    text-align: center;
+  }
+}
+
+input[type="radio"] {
+  & {
+    border-radius: 50%;
+  }
+
+  &:checked::after {
+    background-color: var(--fieldtext);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: .75rem;
+    margin: calc(0.375rem - 1px) auto 0;
+    width: .75rem;
+  }
+}
+
+input[type=range] {
+  & {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /*Styling the Track*/
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    background: var(--color-border);
+    border: 0;
+    border-radius: var(--border-radius);
+    color: var(--fieldtext);
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    background: var(--color-border);
+    border: 0;
+    border-radius: var(--border-radius);
+    color: var(--fieldtext);
+  }
+
+  &::-ms-track {
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background: var(--color-border);
+    border: 0;
+    border-radius: var(--border-radius);
+  }
+
+  &::-ms-fill-upper {
+    background: var(--color-border);
+    border: 0;
+    border-radius: var(--border-radius);
+  }
+
+  /*Styling the Thumb*/
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: -0.5rem;
+    background: var(--fieldtext);
+    border: 2px solid var(--field);
+    border-radius: 50%;
+  }
+
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: -0.5rem;
+    background: var(--fieldtext);
+    border: 2px solid var(--field);
+    border-radius: 50%;
+  }
+
+  &::-ms-range-thumb {
+    -ms-appearance: none;
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: -0.5rem;
+    background: var(--fieldtext);
+    border: 2px solid var(--field);
+    border-radius: 50%;
+  }
+}
+
+input[type="range"]:active {
+  &::-webkit-slider-thumb {
+    background: var(--field-focus-background-color);
+  }
+
+  &::-moz-range-thumb {
+    background: var(--field-focus-background-color);
+  }
+
+  &::-ms-range-thumb {
+    background: var(--field-focus-background-color);
+  }
+}
+
+input[type="range"]:focus {
+  & {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    background: var(--field-focus-background-color);
+  }
+
+  &::-ms-fill-lower {
+    background: var(--field-focus-background-color);
+  }
+
+  &::-ms-fill-upper {
+    background: var(--field-focus-background-color);
+  }
+}
+
+input[type="range"]:focus-visible {
+  &::-webkit-slider-thumb {
+    outline: 2px solid var(--field-focus-border-color);
+    outline-offset: 2px;
+  }
+
+  &::-moz-range-thumb {
+    outline: 2px solid var(--field-focus-border-color);
+    outline-offset: 2px;
+  }
+
+  &::-ms-range-thumb {
+    outline: 2px solid var(--field-focus-border-color);
+    outline-offset: 2px;
+  }
+}
+
+input[type="color"] {
+  cursor: pointer;
+  height: 2.5rem;
+  padding: 0.25rem;
+}
+
+input[type="file"] {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="file"]::file-selector-button {
+  border: 0;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="file"]::file-selector-button {
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+textarea {
+  display: block;
+  font: inherit;
+  resize: vertical;
+  width: 100%;
+}
+
+select {
+  appearance: none;
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+address {
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+meter,
+progress {
+  display: block;
+  color: var(--fieldtext);
+  height: 0.5rem;
+  width: 100%;
+}
+
+progress {
+  &::-webkit-progress-bar {
+    background-color: var(--color-border);
+    border-radius: var(--border-radius);
+  }
+
+  &::-moz-progress-bar {
+    background-color: var(--color-border);
+    border-radius: var(--border-radius);
+  }
+
+  &:indeterminate::-moz-progress-bar {
+    width: 0;
+  }
+
+  /*&::-webkit-progress-inner-element {
+    border: 1px solid var(--color-border);
+  }*/
+}
+
+progress:not([value]) {
+  /*& {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+  }*/
+
+  &::-webkit-progress-bar {
+    background-image: linear-gradient(90deg, #3b82f6 30%, var(--color-border) 30%, var(--color-border) 70%, #3b82f6 70%);
+    background-size: 200% 100%;
+    animation: webkit-indeterminate 1.5s linear infinite;
+  }
+
+  @keyframes webkit-indeterminate {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  &::-moz-progress-bar {
+    background-image: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: moz-indeterminate 1.5s infinite linear;
+  }
+
+  @keyframes moz-indeterminate {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+  }
+}
+
+progress[value] {
+  & {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+  }
+
+  &::-webkit-progress-value {
+    background-color: var(--fieldtext);
+    border-radius: var(--border-radius);
+    transition: width 0.3s ease;
+  }
+}
+
+meter {
+  & {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border: 0;
+    border-radius: var(--border-radius);
+    background: var(--color-border);
+    overflow: hidden;
+  }
+
+  &::-webkit-meter-bar {
+    background: var(--color-border);
+    border: 0;
+    border-radius: var(--border-radius);
+  }
+
+  /* Default uniform fill color */
+  &::-moz-meter-bar {
+    background: var(--color-border);
+    border-radius: var(--border-radius);
+  }
+
+  /* Optimum State (Green zone) */
+  &::-webkit-meter-optimum-value {
+    background: #22c55e;
+    border-radius: var(--border-radius);
+  }
+
+  /* Sub-optimum State (Yellow zone) */
+  &::-webkit-meter-suboptimum-value {
+    background: #eab308;
+    border-radius: var(--border-radius);
+  }
+
+  /* Even worse State (Red zone) */
+  &::-webkit-meter-even-less-good-value {
+    background: #ef4444;
+    border-radius: var(--border-radius);
+  }
+
+  /*&::-webkit-meter-inner-element {
+    display: block;
+  }*/
+}
+
+mark {
+  background-color: #fff000;
+  padding: 0.1rem 0.25rem;
 }
 
 sup {
@@ -253,7 +664,7 @@ sup {
 
 /* Mobile */
 @media screen and (max-width: 75ch) {
-  body, input {
+  body {
     font: var(--text-base) -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
