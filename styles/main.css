@@ -45,6 +45,7 @@
     --color-primary:       #aad56a;
     --color-on-primary:    #222222;
     --color-secondary:     #222222;
+    --color-on-secondary:   #c0c0c0;
   }
 }
 
@@ -64,6 +65,7 @@
     --color-primary:       #aad56a;
     --color-on-primary:    #222222;
     --color-secondary:     #ffffff;
+    --color-on-secondary:   #4b4b4b;
   }
 }
 
