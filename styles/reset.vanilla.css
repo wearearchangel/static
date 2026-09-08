@@ -24,6 +24,13 @@ time, mark, audio, video {
   box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  font: inherit;
+  color: inherit;
+}
+
 /* Variables */
 :root {
   --text-lg: 1.2rem/1.55;
@@ -44,7 +51,16 @@ time, mark, audio, video {
 }
 
 /* Typography */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  line-height: 1.2;
+}
+
 body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
   color: var(--color-text);
   margin: 0 auto;
   padding: 0;
@@ -85,6 +101,14 @@ h5, h6 {
 
 header h1 {
   border-bottom: 1px solid;
+}
+
+p {
+  &:not(:only-child) {
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 a, a:visited {
@@ -187,21 +211,15 @@ figure figcaption {
 }
 
 ul, ol {
-  margin: 2rem 0;
-  padding: 0 0 0 2rem;
-}
+  & {
+    margin: 1rem 0;
+    padding: 0 0 0 2rem;
+  }
 
-ul li, ol li {
-  margin-bottom: 1rem;
-}
-
-li > ul, li > ol {
-  margin: 0.25rem 0 0.5rem;
-  padding: 0 0 0 2rem;
-}
-
-li > ul li, li > ol li {
-  margin-bottom: 0.5rem;
+  li {
+    margin: 0.5rem 0;
+    padding: 0 0 0 1rem;
+  }
 }
 
 dl dd {
