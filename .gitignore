@@ -18,3 +18,10 @@ fonts/Geist*.woff2
 .DS_Store
 Thumbs.db
 desktop.ini
+
+
+# amplify
+node_modules
+.amplify
+amplify_outputs*
+amplifyconfiguration*
