@@ -10,6 +10,10 @@ node_modules/
 # Unused fonts — only Mona Sans and Hubot Sans are part of the design system
 fonts/Geist*.woff2
 
+# Claude
+.claude/settings.local.json
+.claude/worktrees/
+
 # OS files
 .DS_Store
 Thumbs.db
