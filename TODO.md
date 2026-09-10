@@ -6,22 +6,6 @@ Issues and gaps found while consuming this system in a downstream app (`mini-app
 
 ## Missing Variables
 
-### Semantic status colors
-No semantic state colors for UI feedback. Needed for form validation, alert banners, and check-in states (success, already-checked-in, not-found).
-
-```css
---color-success:     /* green tone  — distinct from --color-primary */
---color-success-bg:  /* light green surface */
---color-error:       /* red tone */
---color-error-bg:    /* light red surface */
---color-warning:     /* amber tone */
---color-warning-bg:  /* light amber surface */
---color-info:        /* blue tone */
---color-info-bg:     /* light blue surface */
-```
-
-Note: `--color-success` must be visually distinct from `--color-primary` (#aad56a) since both are green. Consider a blue-green or deeper green for success to avoid ambiguity.
-
 ### On-surface text tokens
 `--color-on-primary` (#222222) was introduced to solve button text contrast on the `#aad56a` primary surface. The same pattern should be extended for consistency:
 
