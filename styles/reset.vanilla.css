@@ -497,6 +497,7 @@ input[type="file"]::file-selector-button {
   cursor: pointer;
   display: inline-block;
   font: inherit;
+  font-weight: bold;
   margin: 0;
   padding: 0.5rem 1rem;
 }
