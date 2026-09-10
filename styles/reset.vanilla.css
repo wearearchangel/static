@@ -481,6 +481,7 @@ input[type="color"] {
 
 input[type="file"] {
   border: 0;
+  color: var(--field);
   background-color: transparent;
   cursor: pointer;
   padding: 0;
@@ -509,6 +510,10 @@ input[type="file"]::file-selector-button {
     cursor: not-allowed;
     opacity: 0.5;
   }
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 0.5rem;
 }
 
 textarea {
