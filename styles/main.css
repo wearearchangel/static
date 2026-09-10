@@ -31,17 +31,26 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    /* Text */
     --color-text:          #333b3c;
     --color-text-2:        darkslategray;
     --color-title:         black;
+
+    /* Surfaces */
     --color-background:    #efedea;
     --color-background-2:  white;
-    --color-link:          #1a56db;
-    --color-link-alt:      #1040b0;
-    --color-border:        #c8c4ba;
-    --color-border-muted:  #dddbd2;
     --color-tint:          #f5f3ef;
     --color-dim:           #eceae5;
+
+    /* Borders */
+    --color-border:        #c8c4ba;
+    --color-border-muted:  #dddbd2;
+
+    /* Links */
+    --color-link:          #1a56db;
+    --color-link-alt:      #1040b0;
+
+    /* Brand */
     --color-primary:       #aad56a;
     --color-on-primary:    #222222;
     --color-secondary:     #222222;
@@ -51,17 +60,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Text */
     --color-text:          #efefec;
     --color-text-2:        lightgray;
     --color-title:         white;
+
+    /* Surfaces */
     --color-background:    #223a2c;
     --color-background-2:  black;
-    --color-link:          #7eb3f8;
-    --color-link-alt:      #aecffa;
-    --color-border:        #4a6741;
-    --color-border-muted:  #3a5233;
     --color-tint:          #1c3023;
     --color-dim:           #182a1e;
+
+    /* Borders */
+    --color-border:        #4a6741;
+    --color-border-muted:  #3a5233;
+
+    /* Links */
+    --color-link:          #7eb3f8;
+    --color-link-alt:      #aecffa;
+
+    /* Brand */
     --color-primary:       #aad56a;
     --color-on-primary:    #222222;
     --color-secondary:     #ffffff;

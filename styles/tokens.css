@@ -20,6 +20,7 @@
 :root {
   color-scheme: light dark;
   --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
   --font-title:  1.5rem/1.1 var(--font-display);
   --font-text:   1rem/1.5 var(--font-sans);
 }
@@ -67,17 +68,26 @@
 /* Dark mode - overrides the @theme values on :root */
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Text */
     --color-text:          #efefec;
     --color-text-2:        lightgray;
     --color-title:         white;
+
+    /* Surfaces */
     --color-background:    #223a2c;
     --color-background-2:  black;
     --color-tint:          #1c3023;
     --color-dim:           #182a1e;
+
+    /* Borders */
     --color-border:        #4a6741;
     --color-border-muted:  #3a5233;
+
+    /* Links */
     --color-link:          #7eb3f8;
     --color-link-alt:      #aecffa;
+
+    /* Brand */
     --color-primary:       #aad56a;
     --color-on-primary:    #222222;
     --color-secondary:     #ffffff;
