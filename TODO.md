@@ -6,15 +6,6 @@ Issues and gaps found while consuming this system in a downstream app (`mini-app
 
 ## Missing Variables
 
-### On-surface text tokens
-`--color-on-primary` (#222222) was introduced to solve button text contrast on the `#aad56a` primary surface. The same pattern should be extended for consistency:
-
-```css
---color-on-secondary:  /* text on --color-secondary surfaces */
---color-on-success:    /* text on success-coloured surfaces  */
---color-on-error:      /* text on error-coloured surfaces    */
-```
-
 ### Interactive state colors
 `--color-link` and `--color-link-alt` cover anchor hover states, but there are no tokens for:
 - Focus rings (`outline-color`)
