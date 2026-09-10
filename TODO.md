@@ -6,20 +6,6 @@ Issues and gaps found while consuming this system in a downstream app (`mini-app
 
 ## Missing Variables
 
-### Font-size scale
-`reset.vanilla.css` defines `--text-lg` (1.2rem) and `--text-base` (1rem) as body/mobile
-shorthand values, but a full named scale is absent. Apps are forced to hard-code sizes below
-and above those two points.
-
-Suggested additions:
-```css
---text-xs:   0.6875rem;  /* 11px */
---text-sm:   0.8125rem;  /* 13px */
---text-md:   0.9375rem;  /* 15px */
---text-xl:   1.5rem;     /* 24px — matches --font-title size */
---text-2xl:  2rem;       /* 32px */
-```
-
 ### Spacing scale
 No spacing tokens. Apps hard-code `px` margins, paddings, and gaps.
 

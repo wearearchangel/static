@@ -33,16 +33,21 @@ time, mark, audio, video {
 
 /* Variables */
 :root {
-  --text-lg: 1.2rem/1.55;
-  --text-base: 1rem/1.45;
+  --text-xs: 0.6875rem;   /* 11px */
+  --text-sm: 0.8125rem;   /* 13px */
+  --text-md: 0.9375rem;   /* 15px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.2rem;      /* 18px */
+  --text-xl: 1.5rem;      /* 24px */
+  --text-2xl: 2rem;       /* 32px */
 
-  --color-text:          #2d2d2d;
-  --color-link:          blue;
-  --color-link-alt:      darkblue;
-  --color-border:        lightsteelblue;
-  --color-border-muted:  #c5d5e8;
-  --color-tint:          aliceblue;
-  --color-dim:           whitesmoke;
+  --color-text: #2d2d2d;
+  --color-link: blue;
+  --color-link-alt: darkblue;
+  --color-border: lightsteelblue;
+  --color-border-muted: #c5d5e8;
+  --color-tint: aliceblue;
+  --color-dim: whitesmoke;
 
   --field: #f0f4f8;
   --fieldtext: #1a202c;
@@ -52,22 +57,19 @@ time, mark, audio, video {
 
 /* Typography */
 html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+
+  font: var(--text-lg)/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.2;
 }
 
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-
   color: var(--color-text);
   margin: 0 auto;
   padding: 0;
-}
-
-body {
-  font: var(--text-lg) -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote, dl, figure {
@@ -162,7 +164,7 @@ cite {
 }
 
 kbd, code, samp, pre, var {
-  font: var(--text-base) monospace;
+  font: var(--text-base)/1.45 monospace;
 }
 
 code, pre {
@@ -683,7 +685,7 @@ sup {
 /* Mobile */
 @media screen and (max-width: 75ch) {
   body {
-    font: var(--text-base) -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font: var(--text-base)/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   table {
