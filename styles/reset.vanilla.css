@@ -52,7 +52,7 @@ time, mark, audio, video {
   --field: #f0f4f8;
   --fieldtext: #1a202c;
   --field-focus-background-color: var(--color-tint);
-  --field-focus-border-color: var(--color-link);
+  --field-focus-border-color: var(--color-focus, var(--color-link));
 
   /* Allow user to override border radius */
   --border-radius: var(--radius-sm);

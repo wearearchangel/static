@@ -58,6 +58,12 @@
   --color-link:          #1a56db;
   --color-link-alt:      #1040b0;
 
+  /* Interactive states */
+  --color-focus:         #1a56db;
+  --color-hover:         #e8e5e0;
+  --color-disabled:      #9a9896;
+  --color-disabled-bg:   #d4d2ce;
+
   /* Brand */
   --color-primary:       #aad56a;
   --color-on-primary:    #222222;
@@ -100,6 +106,12 @@
     /* Links */
     --color-link:          #7eb3f8;
     --color-link-alt:      #aecffa;
+
+    /* Interactive states */
+    --color-focus:         #7eb3f8;
+    --color-hover:         #2a4535;
+    --color-disabled:      #5a5a58;
+    --color-disabled-bg:   #2a3a30;
 
     /* Brand */
     --color-primary:       #aad56a;

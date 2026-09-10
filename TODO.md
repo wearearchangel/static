@@ -4,16 +4,6 @@ Issues and gaps found while consuming this system in a downstream app (`mini-app
 
 ---
 
-## Missing Variables
-
-### Interactive state colors
-`--color-link` and `--color-link-alt` cover anchor hover states, but there are no tokens for:
-- Focus rings (`outline-color`)
-- Hover backgrounds on interactive non-link elements
-- Disabled text and disabled surface
-
----
-
 ## Missing Features
 
 ### Button base styles
