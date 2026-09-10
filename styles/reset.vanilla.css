@@ -53,6 +53,10 @@ time, mark, audio, video {
   --fieldtext: #1a202c;
   --field-focus-background-color: var(--color-tint);
   --field-focus-border-color: var(--color-link);
+
+  /* Allow user to override border radius */
+  --border-radius: var(--radius-sm);
+  --border-radius-full: var(--radius-full, calc(infinity * 1px));
 }
 
 /* Typography */
@@ -317,12 +321,12 @@ input[type="checkbox"] {
 
 input[type="radio"] {
   & {
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
   }
 
   &:checked::after {
     background-color: var(--fieldtext);
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
     content: '';
     display: block;
     height: .75rem;
@@ -394,7 +398,7 @@ input[type=range] {
     margin-top: -0.5rem;
     background: var(--fieldtext);
     border: 2px solid var(--field);
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
   }
 
   &::-moz-range-thumb {
@@ -405,7 +409,7 @@ input[type=range] {
     margin-top: -0.5rem;
     background: var(--fieldtext);
     border: 2px solid var(--field);
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
   }
 
   &::-ms-range-thumb {
@@ -416,7 +420,7 @@ input[type=range] {
     margin-top: -0.5rem;
     background: var(--fieldtext);
     border: 2px solid var(--field);
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
   }
 }
 
@@ -511,6 +515,7 @@ textarea {
   display: block;
   font: inherit;
   resize: vertical;
+  padding: 1rem;
   width: 100%;
 }
 

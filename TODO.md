@@ -6,32 +6,8 @@ Issues and gaps found while consuming this system in a downstream app (`mini-app
 
 ## Missing Variables
 
-### Spacing scale
-No spacing tokens. Apps hard-code `px` margins, paddings, and gaps.
-
-```css
---space-1:  4px;
---space-2:  8px;
---space-3: 12px;
---space-4: 16px;
---space-5: 20px;
---space-6: 24px;
---space-8: 32px;
-```
-
-### Border-radius scale
-No radius tokens. Each app re-invents its own.
-
-```css
---radius-sm: 4px;
---radius:    8px;
---radius-lg: 12px;
---radius-xl: 16px;
-```
-
 ### Semantic status colors
-No semantic state colors for UI feedback. Needed for form validation, alert banners,
-and check-in states (success, already-checked-in, not-found).
+No semantic state colors for UI feedback. Needed for form validation, alert banners, and check-in states (success, already-checked-in, not-found).
 
 ```css
 --color-success:     /* green tone  — distinct from --color-primary */
@@ -44,12 +20,10 @@ and check-in states (success, already-checked-in, not-found).
 --color-info-bg:     /* light blue surface */
 ```
 
-Note: `--color-success` must be visually distinct from `--color-primary` (#aad56a) since
-both are green. Consider a blue-green or deeper green for success to avoid ambiguity.
+Note: `--color-success` must be visually distinct from `--color-primary` (#aad56a) since both are green. Consider a blue-green or deeper green for success to avoid ambiguity.
 
 ### On-surface text tokens
-`--color-on-primary` (#222222) was introduced to solve button text contrast on the
-`#aad56a` primary surface. The same pattern should be extended for consistency:
+`--color-on-primary` (#222222) was introduced to solve button text contrast on the `#aad56a` primary surface. The same pattern should be extended for consistency:
 
 ```css
 --color-on-secondary:  /* text on --color-secondary surfaces */
@@ -58,8 +32,7 @@ both are green. Consider a blue-green or deeper green for success to avoid ambig
 ```
 
 ### Interactive state colors
-`--color-link` and `--color-link-alt` cover anchor hover states, but there are no
-tokens for:
+`--color-link` and `--color-link-alt` cover anchor hover states, but there are no tokens for:
 - Focus rings (`outline-color`)
 - Hover backgrounds on interactive non-link elements
 - Disabled text and disabled surface
@@ -69,16 +42,11 @@ tokens for:
 ## Missing Features
 
 ### Button base styles
-`main.css` sets `background-color: var(--color-primary)` and `color: var(--color-on-primary)`
-on bare `button`, but no padding, border, border-radius, cursor, or font-weight.
-Every app re-implements these from scratch.
+`main.css` sets `background-color: var(--color-primary)` and `color: var(--color-on-primary)` on bare `button`, but no padding, border, border-radius, cursor, or font-weight. Every app re-implements these from scratch.
 
-A base component layer (`components.css`) would be the natural ITCSS next layer after
-elements, covering at minimum: button variants, input, card surface, badge.
+A base component layer (`components.css`) would be the natural ITCSS next layer after elements, covering at minimum: button variants, input, card surface, badge.
 
 ### A `design.html` reference page
-No visual reference for how the system looks when applied. Without it, consumers have
-no way to verify token usage or preview light/dark mode side by side.
+No visual reference for how the system looks when applied. Without it, consumers have no way to verify token usage or preview light/dark mode side by side.
 
-A single static HTML page demonstrating: typography scale, color swatches with variable
-names, button states, form inputs, table, and status colors would serve as the living spec.
+A single static HTML page demonstrating: typography scale, color swatches with variable names, button states, form inputs, table, and status colors would serve as the living spec.
