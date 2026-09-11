@@ -55,7 +55,7 @@ time, mark, audio, video {
   --field-focus-border-color: var(--color-focus, var(--color-link));
 
   /* Allow user to override border radius */
-  --border-radius: var(--radius-sm);
+  --border-radius: var(--radius-none);
   --border-radius-full: var(--radius-full, calc(infinity * 1px));
 }
 
@@ -90,7 +90,7 @@ h1 {
 }
 
 h2 {
-  font-size: 150%;
+  font-size: 160%;
 }
 
 h3 {
