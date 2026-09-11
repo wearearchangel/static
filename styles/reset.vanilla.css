@@ -169,8 +169,11 @@ kbd, code, samp, pre, var {
 }
 
 code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   background: var(--color-dim);
-  border: 1px solid;
+  border: 1px solid var(--color-border-muted);
+  border-radius: var(--border-radius);
   overflow: auto;
   padding: 0.25rem 0.5rem;
 }
