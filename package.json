@@ -10,9 +10,9 @@
   ],
   "exports": {
     "./tokens": "./styles/tokens.css",
-    "./main": "./styles/main.css",
-    "./main.tailwind": "./styles/main.tailwind.css",
-    "./components": "./styles/components.css",
+    "./main.css": "./styles/main.css",
+    "./main.tailwind.css": "./styles/main.tailwind.css",
+    "./components.css": "./styles/components.css",
     "./styles/*": "./styles/*"
   },
   "devDependencies": {

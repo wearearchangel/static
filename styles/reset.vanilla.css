@@ -110,16 +110,25 @@ header h1 {
 }
 
 p {
-  line-height: 1.55;
-  margin-block: 1rem;
+  & {
+    line-height: 1.55;
+    margin-block: 1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-a, a:visited {
-  color: var(--color-link);
-}
+a {
+  &, &:visited {
+    color: var(--color-link);
+  }
 
-a:hover, a:focus {
-  color: var(--color-link-alt);
+  &:hover,
+  &:focus {
+    color: var(--color-link-alt);
+  }
 }
 
 strong, time, b {
@@ -204,16 +213,16 @@ figure {
   display: inline-block;
   padding: 1rem;
   width: 100%;
-}
 
-figure img {
-  margin: 0 auto;
-}
+  & img {
+    margin: 0 auto;
+  }
 
-figure figcaption {
-  font-size: 80%;
-  margin-top: 0.5rem;
-  text-align: center;
+  & figcaption {
+    font-size: 80%;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
 }
 
 ul, ol {
@@ -239,51 +248,52 @@ table {
   table-layout: fixed;
   text-align: left;
   width: 100%;
-}
 
-table caption {
-  margin: 2rem 0;
-}
+  & caption {
+    margin: 2rem 0;
+  }
 
-table tr {
-  border-bottom: 1px solid var(--color-border);
-}
+  & tr {
+    border-bottom: 1px solid var(--color-border);
+  }
 
-table thead {
-  position: sticky;
-  top: 0;
-}
+  & thead {
+    position: sticky;
+    top: 0;
+  }
 
-table tbody tr:nth-child(even) {
-  background: var(--color-dim);
-}
+  & tbody tr:nth-child(even) {
+    background: var(--color-dim);
+  }
 
-table th {
-  background: var(--color-tint);
-  font-weight: bold;
-}
+  & th {
+    background: var(--color-tint);
+    font-weight: bold;
+  }
 
-table th, table td {
-  padding: 0.5rem;
+  & th,
+  & td {
+    padding: 0.5rem;
+  }
 }
 
 input,
 textarea,
 select,
 [contenteditable="true"] {
-  margin: 0;
-  padding: 0.5rem 1rem;
-  background-color: var(--field);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
-  color: var(--fieldtext);
-}
+  & {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--field);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--fieldtext);
+  }
 
-input:focus, input:active,
-textarea:focus, textarea:active,
-select:focus, select:active {
-  background-color: var(--field-focus-background-color);
-  border-color: var(--field-focus-border-color);
+  &:focus, &:active {
+    background-color: var(--field-focus-background-color);
+    border-color: var(--field-focus-border-color);
+  }
 }
 
 input {
@@ -491,21 +501,17 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="file"]::file-selector-button {
-  border: 0;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  display: inline-block;
-  font: inherit;
-  font-weight: bold;
-  margin: 0;
-  padding: 0.5rem 1rem;
-}
+  & {
+    border: 0;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
 
-button,
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-input[type="file"]::file-selector-button {
   &[disabled] {
     cursor: not-allowed;
     opacity: 0.5;
@@ -586,6 +592,7 @@ progress {
 
   /*&::-webkit-progress-inner-element {
     border: 1px solid var(--color-border);
+    display: block;
   }*/
 }
 
@@ -678,6 +685,7 @@ meter {
   }
 
   /*&::-webkit-meter-inner-element {
+    border: 1px solid var(--color-border);
     display: block;
   }*/
 }
