@@ -240,6 +240,21 @@
         margin-bottom: 2rem;
       }
 
+      /* ── Samples: Cards, alerts, etc. ── */
+      .card {
+        background-color: var(--color-background-2);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        padding: var(--spacing-6);
+      }
+
+      .card-title {
+        display: flex;
+        align-items: center;
+        margin-block: 0.5rem;
+        gap: 0.5rem;
+      }
+
       /* ── Usage snippet ── */
       .usage-snippet {
         background-color: var(--color-dim);
@@ -683,19 +698,6 @@
           </div>
         </div>
 
-        <!-- Card -->
-        <div class="ds-subsection">
-          <p class="ds-subsection-title">Card</p>
-          <div class="card">
-            <h3 class="card-title">
-              <span>Check-in confirmed</span>
-              <span class="badge badge-success">Success</span>
-            </h3>
-            <p>Ticket #A-4821 has been validated. The attendee may proceed to the venue.</p>
-            <button type="button" class="btn-ghost btn-sm">View details</button>
-          </div>
-        </div>
-
         <!-- Fields -->
         <div class="ds-subsection">
           <p class="ds-subsection-title">Field groups</p>
@@ -716,6 +718,24 @@
             <label for="ds-success">Ticket code</label>
             <input id="ds-success" type="text" value="A-4821">
             <p class="field-message">Ticket found and validated.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Components (User Defined Sample) ──────────────────────────────────── -->
+      <section id="components" class="ds-section">
+        <h2 class="ds-section-title">Components (User Defined Sample)</h2>
+
+        <!-- Card -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Card</p>
+          <div class="card">
+            <h3 class="card-title">
+              <span>Check-in confirmed</span>
+              <span class="badge badge-success">Success</span>
+            </h3>
+            <p>Ticket #A-4821 has been validated. The attendee may proceed to the venue.</p>
+            <button type="button" class="btn-ghost btn-sm">View details</button>
           </div>
         </div>
       </section>
