@@ -9,7 +9,7 @@
   The bare <button> element carries primary colours from main.css. Modifier classes override colour pairs; structural styles are shared.
 */
 
-[class*="btn"]:not([disabled]):hover {
+[class*="btn"]:not(.btn-group):not([disabled]):hover {
   filter: brightness(0.92);
 }
 
