@@ -26,8 +26,8 @@
   --font-display: "Hubot Sans", "Hubot SansHeaderFallback", var(--font-system);
   --font-sans: "Mona Sans", "MonaSansFallback", var(--font-system);
 
-  --font-title: 1.5rem/1.1 var(--font-display);
-  --font-text: 1rem/1.5 var(--font-sans);
+  --font-title: var(--text-xl)/var(--text-xl--line-height) var(--font-display);
+  --font-text: var(--text-base)/var(--text-base--line-height) var(--font-sans);
 
   /* Spacing scale */
   --spacing-1:  4px;
@@ -147,7 +147,8 @@
 
 html {
   font: 16px/1.3 var(--font-sans);
-  font-feature-settings: normal;
+  font-feature-settings: var(--font-feature-settings, normal);
+  font-variation-settings: var(--font-variation-settings, normal);
 }
 
 body {
@@ -156,13 +157,13 @@ body {
 }
 
 main {
-  font: var(--font-text);
+  font: var(--font-text, 1rem/1.5 var(--font-sans));
   color: var(--color-text-2);
   /*background-color: var(--color-background-2);*/
 }
 
 h1 {
-  font: var(--font-title);
+  font: var(--font-title, 2rem/1.2 var(--font-display));
   color: var(--color-title);
 }
 
