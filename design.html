@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted Design System — Reference</title>
+
+    <link
+      rel="preload"
+      href="https://static.wearearchangel.com/fonts/hubot-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://static.wearearchangel.com/fonts/mona-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://static.wearearchangel.com/styles/main.css"
+      crossorigin
+    />
+
+    <style>
+      body {
+        padding: 0 1.5rem 4rem;
+        max-width: 80ch;
+      }
+
+      /* ── Page sections ── */
+      .ds-section {
+        margin: 4rem 0;
+      }
+
+      .ds-section-title {
+        border-bottom: 1px solid var(--color-border);
+        font: var(--font-title);
+        color: var(--color-title);
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .ds-subsection {
+        margin: 2rem 0;
+      }
+
+      .ds-subsection-title {
+        color: var(--color-text-2);
+        font-family: var(--font-display);
+        font-size: 0.75rem;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      /* ── Color swatches ── */
+      .swatch-grid {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+      }
+
+      .swatch {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+
+      .swatch-color {
+        aspect-ratio: 16 / 9;
+        border: 1px solid var(--color-border-muted);
+        border-radius: var(--radius-md) var(--radius-md) 0 0;
+      }
+
+      .swatch-label {
+        background-color: var(--color-background-2);
+        border: 1px solid var(--color-border-muted);
+        border-top: 0;
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+        padding: 0.4rem 0.5rem;
+      }
+
+      .swatch-name {
+        color: var(--color-text);
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        line-height: 1.4;
+        word-break: break-all;
+      }
+
+      .swatch-value {
+        color: var(--color-text-2);
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+      }
+
+      /* Status swatch group — fg / bg / on as a trio */
+      .status-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .status-group-label {
+        color: var(--color-text-2);
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+        text-transform: capitalize;
+      }
+
+      .status-trio {
+        border-radius: var(--radius-md);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        overflow: hidden;
+      }
+
+      .status-trio-cell {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        justify-content: center;
+        padding: 0.75rem 0.5rem;
+      }
+
+      .status-trio-cell span {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        text-align: center;
+        line-height: 1.3;
+      }
+
+      /* ── Spacing tokens ── */
+      .spacing-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .spacing-row {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .spacing-bar {
+        background-color: var(--color-primary);
+        border-radius: var(--radius-sm);
+        height: 1rem;
+      }
+
+      .spacing-meta {
+        color: var(--color-text-2);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        white-space: nowrap;
+      }
+
+      /* ── Radius tokens ── */
+      .radius-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .radius-swatch {
+        align-items: center;
+        background-color: var(--color-tint);
+        border: 2px solid var(--color-border);
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        height: 4rem;
+        justify-content: center;
+        width: 6rem;
+      }
+
+      .radius-meta {
+        color: var(--color-text-2);
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-align: center;
+      }
+
+      /* ── Typography scale ── */
+      .type-row {
+        align-items: baseline;
+        border-bottom: 1px solid var(--color-border-muted);
+        display: flex;
+        gap: 1.5rem;
+        padding: 0.75rem 0;
+      }
+
+      .type-meta {
+        color: var(--color-text-2);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        min-width: 8rem;
+      }
+
+      .type-weight-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .type-weight-sample {
+        color: var(--color-text-2);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+      }
+
+      /* ── Components showcase ── */
+      .component-row {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .component-label {
+        color: var(--color-text-2);
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .component-group {
+        margin-bottom: 2rem;
+      }
+
+      /* ── Usage snippet ── */
+      .usage-snippet {
+        background-color: var(--color-dim);
+        border: 1px solid var(--color-border-muted);
+        border-radius: var(--radius-md);
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        margin-top: 0.75rem;
+        padding: 0.75rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ─── Header ─────────────────────────────────────────── -->
+    <header role="banner" style="margin: 3rem 0 0;">
+      <h1>Handcrafted Design System</h1>
+      <p>
+        Visual reference for tokens, typography, and components.
+        Maintained by <b>Handcrafted Technologies</b>, the tech division of Archangel.
+      </p>
+      <p>Link in your <code>&lt;head&gt;</code> element:</p>
+      <pre class="usage-snippet">&lt;link rel="stylesheet" href="https://static.wearearchangel.com/styles/main.css" crossorigin&gt;</pre>
+    </header>
+
+    <nav role="navigation" style="margin: 2rem 0;">
+      <ul>
+        <li><a href="#palette">Color palette</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#spacing">Spacing &amp; radius</a></li>
+        <li><a href="#components">Components</a></li>
+      </ul>
+    </nav>
+
+    <main role="main">
+
+      <!-- ─── Color palette ───────────────────────────────── -->
+      <section id="palette" class="ds-section">
+        <h2 class="ds-section-title">Color palette</h2>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Text</p>
+          <div class="swatch-grid">
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-text)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-text</span>
+                <span class="swatch-value">#333b3c / #efefec</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-text-2)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-text-2</span>
+                <span class="swatch-value">darkslategray / lightgray</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-title)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-title</span>
+                <span class="swatch-value">black / white</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Surfaces</p>
+          <div class="swatch-grid">
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-background)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-background</span>
+                <span class="swatch-value">#efedea / #223a2c</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-background-2)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-background-2</span>
+                <span class="swatch-value">white / black</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-tint)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-tint</span>
+                <span class="swatch-value">#f5f3ef / #1c3023</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-dim)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-dim</span>
+                <span class="swatch-value">#eceae5 / #182a1e</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Borders</p>
+          <div class="swatch-grid">
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-border)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-border</span>
+                <span class="swatch-value">#c8c4ba / #4a6741</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-border-muted)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-border-muted</span>
+                <span class="swatch-value">#dddbd2 / #3a5233</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Links</p>
+          <div class="swatch-grid">
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-link)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-link</span>
+                <span class="swatch-value">#1a56db / #7eb3f8</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-link-alt)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-link-alt</span>
+                <span class="swatch-value">#1040b0 / #aecffa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Interactive states</p>
+          <div class="swatch-grid">
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-focus)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-focus</span>
+                <span class="swatch-value">#1a56db / #7eb3f8</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-hover)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-hover</span>
+                <span class="swatch-value">#e8e5e0 / #2a4535</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-disabled)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-disabled</span>
+                <span class="swatch-value">#9a9896 / #5a5a58</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-disabled-bg)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-disabled-bg</span>
+                <span class="swatch-value">#d4d2ce / #2a3a30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Brand</p>
+          <div class="swatch-grid">
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-primary)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-primary</span>
+                <span class="swatch-value">#aad56a</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-on-primary)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-on-primary</span>
+                <span class="swatch-value">#222222</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-secondary)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-secondary</span>
+                <span class="swatch-value">#222222 / #ffffff</span>
+              </div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-on-secondary)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-on-secondary</span>
+                <span class="swatch-value">#c0c0c0 / #4b4b4b</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Semantic status</p>
+          <p style="color: var(--color-text-2); font-size: 0.8rem; margin-bottom: 1rem;">
+            Each status has three tokens: foreground · surface · on-surface text.
+          </p>
+
+          <!-- Success -->
+          <div class="status-group">
+          <p class="status-group-label">Success</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-success);">
+              <span style="color: var(--color-on-success);">Aa</span>
+              <span style="color: var(--color-on-success);">--color-success</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-success-bg);">
+              <span style="color: var(--color-success);">Aa</span>
+              <span style="color: var(--color-success);">--color-success-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-success);">
+              <span style="color: var(--color-on-success); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-success);">--color-on-success</span>
+            </div>
+          </div>
+
+          </div>
+          <!-- Error -->
+          <div class="status-group">
+          <p class="status-group-label">Error</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-error);">
+              <span style="color: var(--color-on-error);">Aa</span>
+              <span style="color: var(--color-on-error);">--color-error</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-error-bg);">
+              <span style="color: var(--color-error);">Aa</span>
+              <span style="color: var(--color-error);">--color-error-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-error);">
+              <span style="color: var(--color-on-error); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-error);">--color-on-error</span>
+            </div>
+          </div>
+
+          </div>
+          <!-- Warning -->
+          <div class="status-group">
+          <p class="status-group-label">Warning</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-warning);">
+              <span style="color: var(--color-on-warning);">Aa</span>
+              <span style="color: var(--color-on-warning);">--color-warning</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-warning-bg);">
+              <span style="color: var(--color-warning);">Aa</span>
+              <span style="color: var(--color-warning);">--color-warning-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-warning);">
+              <span style="color: var(--color-on-warning); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-warning);">--color-on-warning</span>
+            </div>
+          </div>
+
+          </div>
+          <!-- Info -->
+          <div class="status-group">
+          <p class="status-group-label">Info</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-info);">
+              <span style="color: var(--color-on-info);">Aa</span>
+              <span style="color: var(--color-on-info);">--color-info</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-info-bg);">
+              <span style="color: var(--color-info);">Aa</span>
+              <span style="color: var(--color-info);">--color-info-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-info);">
+              <span style="color: var(--color-on-info); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-info);">--color-on-info</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Typography ──────────────────────────────────── -->
+      <section id="typography" class="ds-section">
+        <h2 class="ds-section-title">Typography</h2>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Heading scale — Hubot Sans (--font-display)</p>
+          <div class="type-row"><span class="type-meta">h1 · 2em</span><h1 style="margin: 0;">Heading one</h1></div>
+          <div class="type-row"><span class="type-meta">h2 · 1.5em</span><h2 style="margin: 0;">Heading two</h2></div>
+          <div class="type-row"><span class="type-meta">h3 · 1.2em</span><h3 style="margin: 0;">Heading three</h3></div>
+          <div class="type-row"><span class="type-meta">h4 · 1em</span><h4 style="margin: 0;">Heading four</h4></div>
+          <div class="type-row"><span class="type-meta">h5 · 1em upper</span><h5 style="margin: 0;">Heading five</h5></div>
+          <div class="type-row"><span class="type-meta">h6 · 1em upper</span><h6 style="margin: 0;">Heading six</h6></div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Body — Mona Sans (--font-sans)</p>
+          <div class="type-row">
+            <span class="type-meta">--font-text<br>1rem / 1.5</span>
+            <p style="margin: 0;">The quick brown fox jumps over the lazy dog. A baseline stylesheet maintained by Handcrafted Technologies.</p>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">--font-mono</span>
+            <code>const token = 'var(--color-primary)';</code>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Variable weight range — 200 to 900</p>
+          <div class="type-weight-row">
+            <div>
+              <p class="type-weight-sample">font-weight: 200</p>
+              <p style="font-family: var(--font-sans); font-weight: 200; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+            </div>
+            <div>
+              <p class="type-weight-sample">font-weight: 400</p>
+              <p style="font-family: var(--font-sans); font-weight: 400; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+            </div>
+            <div>
+              <p class="type-weight-sample">font-weight: 600</p>
+              <p style="font-family: var(--font-sans); font-weight: 600; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+            </div>
+            <div>
+              <p class="type-weight-sample">font-weight: 800</p>
+              <p style="font-family: var(--font-sans); font-weight: 800; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+            </div>
+            <div>
+              <p class="type-weight-sample">font-weight: 900</p>
+              <p style="font-family: var(--font-sans); font-weight: 900; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Spacing & radius ────────────────────────────── -->
+      <section id="spacing" class="ds-section">
+        <h2 class="ds-section-title">Spacing &amp; radius</h2>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Spacing scale</p>
+          <div class="spacing-grid">
+            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-1)"></div><span class="spacing-meta">--spacing-1 · 4px</span></div>
+            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-2)"></div><span class="spacing-meta">--spacing-2 · 8px</span></div>
+            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-3)"></div><span class="spacing-meta">--spacing-3 · 12px</span></div>
+            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-4)"></div><span class="spacing-meta">--spacing-4 · 16px</span></div>
+            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-5)"></div><span class="spacing-meta">--spacing-5 · 20px</span></div>
+            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-6)"></div><span class="spacing-meta">--spacing-6 · 24px</span></div>
+            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-8)"></div><span class="spacing-meta">--spacing-8 · 32px</span></div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Border radius scale</p>
+          <div class="radius-grid">
+            <div>
+              <div class="radius-swatch" style="border-radius: var(--radius-none)"></div>
+              <p class="radius-meta">--radius-none<br>0</p>
+            </div>
+            <div>
+              <div class="radius-swatch" style="border-radius: var(--radius-sm)"></div>
+              <p class="radius-meta">--radius-sm<br>4px</p>
+            </div>
+            <div>
+              <div class="radius-swatch" style="border-radius: var(--radius-md)"></div>
+              <p class="radius-meta">--radius-md<br>6px</p>
+            </div>
+            <div>
+              <div class="radius-swatch" style="border-radius: var(--radius-lg)"></div>
+              <p class="radius-meta">--radius-lg<br>8px</p>
+            </div>
+            <div>
+              <div class="radius-swatch" style="border-radius: var(--radius-xl)"></div>
+              <p class="radius-meta">--radius-xl<br>16px</p>
+            </div>
+            <div>
+              <div class="radius-swatch" style="border-radius: var(--radius-full)"></div>
+              <p class="radius-meta">--radius-full<br>∞</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Components ──────────────────────────────────── -->
+      <section id="components" class="ds-section">
+        <h2 class="ds-section-title">Components</h2>
+
+        <!-- Buttons -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Buttons</p>
+
+          <div class="component-group">
+            <p class="component-label">Variants</p>
+            <div class="component-row">
+              <button type="button">Default</button>
+              <button type="button" class="btn-secondary">Secondary</button>
+              <button type="button" class="btn-danger">Danger</button>
+              <button type="button" class="btn-ghost">Ghost</button>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <p class="component-label">Sizes</p>
+            <div class="component-row">
+              <button type="button" class="btn-sm">Small</button>
+              <button type="button">Default</button>
+              <button type="button" class="btn-lg">Large</button>
+            </div>
+          </div>
+
+          <div class="component-group">
+            <p class="component-label">Disabled</p>
+            <div class="component-row">
+              <button type="button" disabled>Primary</button>
+              <button type="button" class="btn-secondary" disabled>Secondary</button>
+              <button type="button" class="btn-danger" disabled>Danger</button>
+              <button type="button" class="btn-ghost" disabled>Ghost</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Badges</p>
+          <div class="component-row">
+            <span class="badge badge-success">Success</span>
+            <span class="badge badge-error">Error</span>
+            <span class="badge badge-warning">Warning</span>
+            <span class="badge badge-info">Info</span>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Card</p>
+          <div class="card">
+            <h3 style="margin-block: 0.5rem;">Check-in confirmed <span class="badge badge-success" style="vertical-align: middle;">Success</span></h3>
+            <p>Ticket #A-4821 has been validated. The attendee may proceed to the venue.</p>
+            <button type="button" class="btn-ghost btn-sm">View details</button>
+          </div>
+        </div>
+
+        <!-- Fields -->
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Field groups</p>
+
+          <div class="field">
+            <label for="ds-default">Default</label>
+            <input id="ds-default" type="text" placeholder="e.g. John Doe">
+            <p class="field-hint">Enter your full name as it appears on your ticket.</p>
+          </div>
+
+          <div class="field field--error">
+            <label for="ds-error">Email address</label>
+            <input id="ds-error" type="email" value="not-an-email">
+            <p class="field-message">Enter a valid email address.</p>
+          </div>
+
+          <div class="field field--success">
+            <label for="ds-success">Ticket code</label>
+            <input id="ds-success" type="text" value="A-4821">
+            <p class="field-message">Ticket found and validated.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer role="contentinfo">
+      <hr>
+      <p>
+        <small>
+          Handcrafted Design System by Handcrafted Technologies.
+          Based on <a href="https://git.sr.ht/~bt/vanilla-css">vanilla-css</a> by Bradley Taunt.
+        </small>
+      </p>
+    </footer>
+
+  </body>
+</html>

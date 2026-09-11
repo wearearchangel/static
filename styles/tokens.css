@@ -135,6 +135,123 @@
   }
 }
 
+/* Component layer — button variants, badges, card, field groups */
+@layer components {
+  button:not([disabled]):hover,
+  [class*="btn"]:not([disabled]):hover {
+    filter: brightness(0.92);
+  }
+
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+  }
+
+  .btn-danger {
+    background-color: var(--color-error);
+    color: var(--color-on-error);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+
+  .btn-ghost:not([disabled]):hover {
+    background-color: var(--color-hover);
+    filter: none;
+  }
+
+  .btn-sm {
+    font-size: 0.8125rem;
+    padding: var(--spacing-1) var(--spacing-3);
+  }
+
+  .btn-lg {
+    font-size: 1.125rem;
+    padding: var(--spacing-3) var(--spacing-6);
+  }
+
+  .badge {
+    border-radius: var(--radius-full);
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0.25rem 0.625rem;
+  }
+
+  .badge-success {
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+  }
+
+  .badge-error {
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+  }
+
+  .badge-warning {
+    background-color: var(--color-warning-bg);
+    color: var(--color-warning);
+  }
+
+  .badge-info {
+    background-color: var(--color-info-bg);
+    color: var(--color-info);
+  }
+
+  .card {
+    background-color: var(--color-background-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .field label {
+    font-weight: bold;
+  }
+
+  .field-hint {
+    color: var(--color-text-2);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .field-message {
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .field--error input,
+  .field--error select,
+  .field--error textarea {
+    border-color: var(--color-error);
+  }
+
+  .field--error .field-message {
+    color: var(--color-error);
+  }
+
+  .field--success input,
+  .field--success select,
+  .field--success textarea {
+    border-color: var(--color-success);
+  }
+
+  .field--success .field-message {
+    color: var(--color-success);
+  }
+}
+
 /* Brand element baseline - restores design system intent over Preflight */
 @layer base {
   html {

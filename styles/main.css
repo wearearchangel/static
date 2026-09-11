@@ -1,4 +1,5 @@
 @import './reset.vanilla.css';
+@import './components.css';
 
 @font-face {
   font-family: 'Mona Sans';
