@@ -9,9 +9,11 @@
   The bare <button> element carries primary colours from main.css. Modifier classes override colour pairs; structural styles are shared.
 */
 
-button:not([disabled]):hover,
-[class*="btn"]:not([disabled]):hover {
-  filter: brightness(0.92);
+button,
+[class*="btn"] {
+  &:not([disabled]):hover {
+    filter: brightness(0.92);
+  }
 }
 
 .btn {
@@ -19,13 +21,15 @@ button:not([disabled]):hover,
   border: 1px solid transparent;
   border-radius: var(--border-radius);
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font: inherit;
   font-weight: bold;
   font-size: var(--text-base);
   line-height: var(--text-base--line-height);
   text-decoration: none;
   padding: var(--spacing-2) var(--spacing-4);
+  gap: var(--spacing-2);
   margin: 0;
 }
 
@@ -33,12 +37,14 @@ button:not([disabled]):hover,
   font-size: var(--text-sm);
   line-height: var(--text-sm--line-height);
   padding: var(--spacing-1) var(--spacing-3);
+  gap: var(--spacing-1);
 }
 
 .btn-lg {
   font-size: var(--text-lg);
   line-height: var(--text-lg--line-height);
   padding: var(--spacing-3) var(--spacing-6);
+  gap: var(--spacing-3);
 }
 
 .btn-primary {
