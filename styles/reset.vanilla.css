@@ -502,6 +502,8 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="file"]::file-selector-button {
+  color: var(--color-text);
+  background-color: var(--color-tint);
   border: 1px solid transparent;
   border-radius: var(--border-radius);
   cursor: pointer;

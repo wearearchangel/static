@@ -281,15 +281,6 @@
     color: var(--color-title);
   }
 
-  button,
-  input[type="submit"],
-  input[type="button"],
-  input[type="reset"],
-  input[type="file"]::file-selector-button {
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-  }
-
   /* Screen reader text */
   .srt {
     @apply sr-only;
