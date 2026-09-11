@@ -511,6 +511,7 @@ input[type="file"]::file-selector-button {
   font-size: var(--text-base);
   line-height: var(--text-base--line-height);
   padding: var(--spacing-2) var(--spacing-4);
+  text-decoration: none;
   margin: 0;
 }
 
