@@ -69,12 +69,15 @@ button:not([disabled]):hover,
 /* ─── Badges ───────────────────────────────────────────────────── */
 
 .badge {
-  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
   display: inline-block;
-  font-size: var(--text-sm);
-  font-weight: bold;
-  line-height: var(--text-sm--line-height);
-  padding: 0.25rem 0.625rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: var(--text-xs);
+  line-height: var(--text-xs--line-height);
+  padding: var(--spacing-1) var(--spacing-2);
+  margin: 0;
 }
 
 .badge-success {
