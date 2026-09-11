@@ -710,16 +710,28 @@
             <p class="field-hint">Enter your full name as it appears on your ticket.</p>
           </div>
 
-          <div class="field field--error">
-            <label for="ds-error">Email address</label>
-            <input id="ds-error" type="email" value="not-an-email">
-            <p class="field-message">Enter a valid email address.</p>
-          </div>
-
           <div class="field field--success">
             <label for="ds-success">Ticket code</label>
             <input id="ds-success" type="text" value="A-4821">
-            <p class="field-message">Ticket found and validated.</p>
+            <p class="field-message">Seat found and validated.</p>
+          </div>
+
+          <div class="field field--error">
+            <label for="ds-error">Ticket code</label>
+            <input id="ds-error" type="text" value="A-4821">
+            <p class="field-message">Seat not found or invalid.</p>
+          </div>
+
+          <div class="field field--warning">
+            <label for="ds-warning">Ticket code</label>
+            <input id="ds-warning" type="text" value="A-4821">
+            <p class="field-message">Seat may already be reserved.</p>
+          </div>
+
+          <div class="field field--info">
+            <label for="ds-info">Ticket code</label>
+            <input id="ds-info" type="text" value="A-4821">
+            <p class="field-message">Seat can be resold.</p>
           </div>
         </div>
       </section>

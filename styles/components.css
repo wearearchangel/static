@@ -139,6 +139,16 @@
   margin: 0;
 }
 
+.field--success input,
+.field--success select,
+.field--success textarea {
+  border-color: var(--color-success);
+}
+
+.field--success .field-message {
+  color: var(--color-success);
+}
+
 .field--error input,
 .field--error select,
 .field--error textarea {
@@ -149,12 +159,22 @@
   color: var(--color-error);
 }
 
-.field--success input,
-.field--success select,
-.field--success textarea {
-  border-color: var(--color-success);
+.field--warning input,
+.field--warning select,
+.field--warning textarea {
+  border-color: var(--color-warning);
 }
 
-.field--success .field-message {
-  color: var(--color-success);
+.field--warning .field-message {
+  color: var(--color-warning);
+}
+
+.field--info input,
+.field--info select,
+.field--info textarea {
+  border-color: var(--color-info);
+}
+
+.field--info .field-message {
+  color: var(--color-info);
 }
