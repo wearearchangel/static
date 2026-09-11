@@ -1,19 +1,29 @@
 /*
   components.css
-  Component layer — sits above the element layer in the ITCSS stack.
-  Built entirely from design-system tokens; no magic numbers.
+  Component layer — sits above the element layer in the ITCSS stack. Built entirely from design-system tokens; no magic numbers.
 */
 
 /* ─── Buttons ─────────────────────────────────────────────────── */
 
 /*
-  The bare <button> element carries primary colours from main.css.
-  Modifier classes override colour pairs; structural styles are shared.
+  The bare <button> element carries primary colours from main.css. Modifier classes override colour pairs; structural styles are shared.
 */
 
 button:not([disabled]):hover,
 [class*="btn"]:not([disabled]):hover {
   filter: brightness(0.92);
+}
+
+.btn {
+  /* Inherited from <button> in reset */
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5rem 1rem;
 }
 
 .btn-primary {
@@ -33,7 +43,7 @@ button:not([disabled]):hover,
 
 .btn-ghost {
   background-color: transparent;
-  border: 1px solid var(--color-border);
+  border-color: var(--color-border);
   color: var(--color-text);
 }
 
