@@ -76,7 +76,7 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, blockquote, dl, figure {
+h1, h2, h3, h4, h5, h6, blockquote, dl, figure {
   margin: 2rem 0;
 }
 
@@ -110,11 +110,8 @@ header h1 {
 }
 
 p {
-  &:not(:only-child) {
-    &:not(:last-of-type) {
-      margin-bottom: 2rem;
-    }
-  }
+  line-height: 1.55;
+  margin-block: 1rem;
 }
 
 a, a:visited {
@@ -271,7 +268,7 @@ input,
 textarea,
 select,
 [contenteditable="true"] {
-  margin: 0.5rem 0;
+  margin: 0;
   padding: 0.5rem 1rem;
   background-color: var(--field);
   border: 1px solid var(--color-border);
@@ -291,7 +288,6 @@ input {
   appearance: none;
   display: block;
   font: inherit;
-  margin: 0.5rem 0;
 }
 
 input[type="checkbox"],
