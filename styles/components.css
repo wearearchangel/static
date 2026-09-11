@@ -94,7 +94,7 @@
 }
 
 .btn-ghost:not([disabled]):hover {
-  background-color: transparent;
+  background-color: var(--color-hover);
   filter: none;
 }
 
