@@ -110,10 +110,8 @@ header h1 {
 }
 
 p {
-  & {
-    line-height: 1.55;
-    margin-block: 1rem;
-  }
+  line-height: 1.55;
+  margin-block: 1rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -226,10 +224,8 @@ figure {
 }
 
 ul, ol {
-  & {
-    margin: 1rem 0;
-    padding: 0 0 0 2rem;
-  }
+  margin: 1rem 0;
+  padding: 0 0 0 2rem;
 
   li {
     margin: 0.5rem 0;
@@ -281,14 +277,12 @@ input,
 textarea,
 select,
 [contenteditable="true"] {
-  & {
-    margin: 0;
-    padding: 0.5rem 1rem;
-    background-color: var(--field);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    color: var(--fieldtext);
-  }
+  margin: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--field);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--fieldtext);
 
   &:focus, &:active {
     background-color: var(--field-focus-background-color);
@@ -329,9 +323,7 @@ input[type="checkbox"] {
 }
 
 input[type="radio"] {
-  & {
-    border-radius: var(--border-radius-full);
-  }
+  border-radius: var(--border-radius-full);
 
   &:checked::after {
     background-color: var(--fieldtext);
@@ -345,15 +337,13 @@ input[type="radio"] {
 }
 
 input[type=range] {
-  & {
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    padding: 0;
-    width: 100%;
-  }
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 100%;
 
   /*Styling the Track*/
   &::-webkit-slider-runnable-track {
@@ -448,9 +438,7 @@ input[type="range"]:active {
 }
 
 input[type="range"]:focus {
-  & {
-    outline: none;
-  }
+  outline: none;
 
   &::-webkit-slider-runnable-track {
     background: var(--field-focus-background-color);
@@ -501,21 +489,23 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"],
 input[type="file"]::file-selector-button {
-  & {
-    border: 1px solid transparent;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    display: inline-block;
-    font: inherit;
-    font-weight: bold;
-    margin: 0;
-    padding: 0.5rem 1rem;
-  }
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
 
-  &[disabled] {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
+button:disabled,
+button[disabled],
+input[type="submit"]:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 input[type="file"]::file-selector-button {
