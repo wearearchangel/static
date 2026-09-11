@@ -21,6 +21,8 @@ button:not([disabled]):hover,
   cursor: pointer;
   display: inline-block;
   font: inherit;
+  font-size: var(--text-sm);
+  line-height: var(--text-sm--line-height);
   font-weight: bold;
   margin: 0;
   padding: 0.5rem 1rem;
@@ -54,11 +56,13 @@ button:not([disabled]):hover,
 
 .btn-sm {
   font-size: var(--text-sm);
+  line-height: var(--text-sm--line-height);
   padding: var(--spacing-1) var(--spacing-3);
 }
 
 .btn-lg {
   font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
   padding: var(--spacing-3) var(--spacing-6);
 }
 
@@ -69,7 +73,7 @@ button:not([disabled]):hover,
   display: inline-block;
   font-size: var(--text-sm);
   font-weight: bold;
-  line-height: 1;
+  line-height: var(--text-sm--line-height);
   padding: 0.25rem 0.625rem;
 }
 
