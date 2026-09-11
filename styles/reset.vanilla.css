@@ -38,11 +38,11 @@ time, mark, audio, video {
   --text-sm: .875rem;      /* 14px */
   --text-sm--line-height: calc(1.25 / .875);
   --text-base: 1rem;      /* 16px */
-  --text-base--line-height: calc(1.5 / 1);
+  --text-base--line-height: calc(1.375 / 1);
   --text-lg: 1.2rem;      /* 18px */
-  --text-lg--line-height: calc(1.75 / 1.2);
+  --text-lg--line-height: calc(1.5 / 1.2);
   --text-xl: 1.5rem;      /* 24px */
-  --text-xl--line-height: calc(1.75 / 1.5);
+  --text-xl--line-height: calc(1.5 / 1.5);
 
   --color-text: #2d2d2d;
   --color-link: blue;
@@ -504,11 +504,11 @@ input[type="file"]::file-selector-button {
   cursor: pointer;
   display: inline-block;
   font: inherit;
-  /*font-size: var(--text-sm);*/
   font-weight: bold;
-  /*line-height: var(--text-sm--line-height);*/
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+  padding: var(--spacing-2) var(--spacing-4);
   margin: 0;
-  padding: 0.5rem 1rem;
 }
 
 button:disabled,
