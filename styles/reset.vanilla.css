@@ -138,12 +138,12 @@ em, dfn, i {
 }
 
 sub {
-  font-size: 60%;
+  font-size: var(--text-xs);
   vertical-align: bottom;
 }
 
 small {
-  font-size: 80%;
+  font-size: var(--text-sm);
 }
 
 blockquote, q {
@@ -177,7 +177,7 @@ kbd, code, samp, pre, var {
 
 code, pre {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
   background: var(--color-dim);
   border: 1px solid var(--color-border-muted);
   border-radius: var(--border-radius);
@@ -217,7 +217,7 @@ figure {
   }
 
   & figcaption {
-    font-size: 80%;
+    font-size: var(--text-sm);
     margin-top: 0.5rem;
     text-align: center;
   }
@@ -686,7 +686,7 @@ mark {
 }
 
 sup {
-  font-size: 80%;
+  font-size: var(--text-sm);
   vertical-align: top;
 }
 

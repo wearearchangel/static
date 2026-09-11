@@ -53,12 +53,12 @@ button:not([disabled]):hover,
 }
 
 .btn-sm {
-  font-size: 0.8125rem;
+  font-size: var(--text-sm);
   padding: var(--spacing-1) var(--spacing-3);
 }
 
 .btn-lg {
-  font-size: 1.125rem;
+  font-size: var(--text-lg);
   padding: var(--spacing-3) var(--spacing-6);
 }
 
@@ -67,7 +67,7 @@ button:not([disabled]):hover,
 .badge {
   border-radius: var(--radius-full);
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: var(--text-sm);
   font-weight: bold;
   line-height: 1;
   padding: 0.25rem 0.625rem;
@@ -108,12 +108,12 @@ button:not([disabled]):hover,
 
 .field-hint {
   color: var(--color-text-2);
-  font-size: 80%; /* Similar to small text */
+  font-size: var(--text-sm);
   margin: 0;
 }
 
 .field-message {
-  font-size: 80%; /* Similar to small text */
+  font-size: var(--text-sm);
   margin: 0;
 }
 
