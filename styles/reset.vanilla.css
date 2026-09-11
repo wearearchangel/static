@@ -127,15 +127,12 @@ p {
   }
 }
 
-a {
-  &, &:visited {
-    color: var(--color-link);
-  }
+a, a:visited {
+  color: var(--color-link);
+}
 
-  &:hover,
-  &:focus {
-    color: var(--color-link-alt);
-  }
+a:hover, a:focus {
+  color: var(--color-link-alt);
 }
 
 strong, time, b {
