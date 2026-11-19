@@ -274,6 +274,9 @@ table {
   border-radius: var(--border-radius);
   border-collapse: collapse;
   table-layout: fixed;
+
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
   text-align: left;
   width: 100%;
 
