@@ -58,6 +58,12 @@
           </ul>
         </li>
         <li>
+          <a href="#assets">Assets</a>
+          <ul>
+            <li><a href="#assets/placeholders">Placeholders</a></li>
+          </ul>
+        </li>
+        <li>
           <a href="#samples">Samples</a>
           <ul>
             <li><a href="#samples/card">Card</a></li>
@@ -861,6 +867,143 @@
               venue.
             </p>
             <button type="button" class="btn-ghost btn-sm">View details</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── Assets ───────────────────────────────────────── -->
+      <section id="assets" class="ds-section">
+        <h2 class="ds-section-title">Assets</h2>
+
+        <!-- Placeholders -->
+        <div id="assets/placeholders" class="ds-subsection">
+          <p class="ds-subsection-title">Placeholders</p>
+          <p>
+            <code>static.wearearchangel.com</code> serves placeholder media for
+            anywhere real content does not exist yet. There is one file per
+            role. Pick the file by what the placeholder is standing in for, not
+            by guessing at a format.
+          </p>
+
+          <table>
+            <caption>
+              Placeholder files and the role each one is for
+            </caption>
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Use for</th>
+                <th>Preview</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>placeholder.svg</code></td>
+                <td>
+                  <b>Background placeholders.</b> An image filling a card or
+                  section as a background layer, with content on top of it.
+                </td>
+                <td>
+                  <img
+                    class="placeholder-preview"
+                    src="/placeholder.svg"
+                    alt="Grey placeholder background"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><code>placeholder.webp</code></td>
+                <td>
+                  <b>Normal images.</b> Inline content photos that do not play a
+                  background role.
+                </td>
+                <td>
+                  <img
+                    class="placeholder-preview"
+                    src="/placeholder.webp"
+                    alt="Grey placeholder image"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><code>placeholder.webm</code></td>
+                <td><b>Mini or short videos.</b></td>
+                <td>
+                  <video
+                    class="placeholder-preview"
+                    src="/placeholder.webm"
+                    controls
+                    preload="none"
+                  ></video>
+                </td>
+              </tr>
+              <tr>
+                <td><code>placeholder.mp4</code></td>
+                <td><b>Full-length videos.</b></td>
+                <td>
+                  <video
+                    class="placeholder-preview"
+                    src="/placeholder.mp4"
+                    controls
+                    preload="none"
+                  ></video>
+                </td>
+              </tr>
+              <tr>
+                <td><code>placeholder.mp3</code></td>
+                <td><b>Audio.</b></td>
+                <td>
+                  <audio
+                    class="placeholder-preview"
+                    src="/placeholder.mp3"
+                    controls
+                    preload="none"
+                  ></audio>
+                </td>
+              </tr>
+              <tr>
+                <td><code>placeholder.pdf</code></td>
+                <td>
+                  <b>Downloadable documents.</b> A real, tiny one-page PDF
+                  rather than a stub that returns 404.
+                </td>
+                <td><a href="/placeholder.pdf">Open the PDF</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="component-group">
+            <p class="component-label">Fallback for a failed image</p>
+            <pre class="usage-snippet">
+&lt;img
+  src="/images/hero.jpg"
+  alt=""
+  onerror="this.onerror = null; this.src = 'https://static.wearearchangel.com/placeholder.webp'"
+/&gt;</pre>
+            <p>
+              Use <code>placeholder.svg</code> as the fallback when the failed
+              image was a background layer, and <code>placeholder.webp</code>
+              for any other image.
+            </p>
+          </div>
+
+          <div class="component-group">
+            <p class="component-label">Things to know</p>
+            <ul>
+              <li>
+                Placeholders are starting points. Replace each one with real
+                content as it becomes available.
+              </li>
+              <li>
+                You may load them from the CDN at runtime, but the files can be
+                renamed or removed. Copy a placeholder into your own project if
+                it must not break.
+              </li>
+              <li>
+                <code>placeholder.mp4</code> replaced the earlier
+                <code>placeholder.m4v</code>, which no longer exists.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
