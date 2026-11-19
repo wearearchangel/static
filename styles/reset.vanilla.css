@@ -144,7 +144,7 @@ p {
   line-height: 1.55;
   margin-block: 1rem;
 
-  &:last-child {
+  &:where(:last-child) {
     margin-bottom: 0;
   }
 }
@@ -185,11 +185,11 @@ blockquote, q {
 }
 
 blockquote p {
-  &:first-child {
+  &:where(:first-child) {
     margin-top: 0;
   }
 
-  &:last-child {
+  &:where(:last-child) {
     margin-bottom: 0;
   }
 }
