@@ -32,6 +32,7 @@
   margin: 0;
 }
 
+/* Buttons by Size */
 .btn-sm {
   font-size: var(--text-sm);
   line-height: var(--text-sm--line-height);
@@ -46,6 +47,7 @@
   gap: var(--spacing-3);
 }
 
+/* Buttons by Variant */
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
@@ -64,6 +66,16 @@
 .btn-secondary[disabled] {
   background-color: color-mix(in srgb, var(--color-secondary) 50%, transparent);
   color: color-mix(in srgb, var(--color-on-secondary) 80%, transparent);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.btn-accent[disabled] {
+  background-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
+  color: color-mix(in srgb, var(--color-on-accent) 80%, transparent);
 }
 
 .btn-success {
@@ -139,6 +151,7 @@
   filter: none;
 }
 
+/* Button Groups */
 .btn-group {
   display: flex;
   flex-wrap: wrap;

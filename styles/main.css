@@ -80,6 +80,8 @@
     --color-on-primary:    #29331a;
     --color-secondary:     #29331a;
     --color-on-secondary:  #fcf9fe;
+    --color-accent:        #d6cd6b;
+    --color-on-accent:     #29331a;
 
     /* Semantic status colors */
     --color-success:     #1a7a4a;
@@ -130,6 +132,8 @@
     --color-on-primary:    #29331a;
     --color-secondary:     #fcf9fe;
     --color-on-secondary:  #29331a;
+    --color-accent:        #d6cd6b;
+    --color-on-accent:     #29331a;
 
     /* Semantic status colors */
     --color-success:     #34d399;
