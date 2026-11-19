@@ -24,6 +24,13 @@
   padding-left: 1.5rem;
 }
 
+/* Keep lines of legal text a readable length on a wide page. rem, not ch:
+   ch changes when the web font swaps in, which reflows the text after the
+   browser has already scrolled to a #section anchor. */
+.license-text {
+  max-width: 44rem;
+}
+
 /* A section heading is followed by its text, so keep it close. */
 .license-text h2 {
   font: var(--font-title);

@@ -1,0 +1,99 @@
+/*
+  Site chrome shared by the /design pages: the page shell and the navigation
+  bar. Load after /design/assets/docs.css.
+*/
+
+/*
+  Page shell. Every page has <body class="docs"> (scripts/docs-nav.mjs adds
+  it). The window keeps its native scroll, so reload, the back button,
+  find-in-page, printing and keyboard scrolling all behave. The nav sticks to
+  the top, and every direct child of <body> shares one centred column, so the
+  nav's border and background can run edge to edge.
+*/
+.docs {
+  --docs-pad: max(
+    var(--docs-gutter),
+    calc((100% - var(--docs-width)) / 2 + var(--docs-gutter))
+  );
+
+  padding-bottom: 4rem;
+}
+
+.docs > * {
+  padding-inline: var(--docs-pad);
+}
+
+/* Navigation bar. Its height is fixed so everything that has to clear it
+   (anchors, sticky table headers) can use --docs-nav-height. */
+.docs-nav {
+  align-items: center;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 0.5rem 2rem;
+  height: var(--docs-nav-height);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.docs-nav-title {
+  color: var(--color-title);
+  font-family: var(--font-display);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.docs-nav ul {
+  display: flex;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 0;
+}
+
+.docs-nav li {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* The page you are on: no underline, full-strength colour. */
+.docs-nav a[aria-current="page"] {
+  color: var(--color-title);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* List of the other pages, stamped by scripts/docs-nav.mjs. */
+.docs-index {
+  margin: 2rem 0;
+}
+
+/* Keep deep-linked targets and sticky table headers clear of the nav. */
+html:has(.docs) {
+  scroll-padding-top: calc(var(--docs-nav-height) + 1rem);
+}
+
+.docs table thead {
+  top: var(--docs-nav-height);
+}
+
+/* On a phone there is room for the links or the title, not both. */
+@media (max-width: 40rem) {
+  .docs-nav-title {
+    display: none;
+  }
+
+  .docs-nav ul {
+    gap: 0.25rem 1rem;
+  }
+}
+
+@media print {
+  .docs-nav {
+    display: none;
+  }
+}

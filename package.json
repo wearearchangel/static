@@ -19,7 +19,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "license:build": "node scripts/license-page.mjs --write && prettier --write design/license/index.html",
-    "license:check": "node scripts/license-page.mjs --check"
+    "license:check": "node scripts/license-page.mjs --check",
+    "nav:build": "node scripts/docs-nav.mjs --write && prettier --write design",
+    "nav:check": "node scripts/docs-nav.mjs --check"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,json,css}": [
@@ -27,7 +29,8 @@
       "prettier --write"
     ],
     "*.{html,md,yml,yaml}": "prettier --write",
-    "design/{LICENSE.txt,license/index.html}": "node scripts/license-page.mjs --check"
+    "design/{LICENSE.txt,license/index.html}": "node scripts/license-page.mjs --check",
+    "{design/index.html,design/*/index.html,design/assets/layout.css,scripts/docs-nav.mjs}": "node scripts/docs-nav.mjs --check"
   },
   "exports": {
     "./tokens": "./styles/tokens.css",

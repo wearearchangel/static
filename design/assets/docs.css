@@ -3,15 +3,11 @@
   Page-specific styles live in each page folder's module.css.
 */
 
-body {
-  padding: 0 1.5rem 4rem;
-  max-width: 1028px;
-}
-
-/* Keep deep-linked sections (#foundations/color, ...) clear of the top edge */
-section[id],
-.ds-subsection[id] {
-  scroll-margin-top: 1.5rem;
+/* Docs-only layout values, used by layout.css. Pages can override them. */
+:root {
+  --docs-width: 1028px;
+  --docs-gutter: 1.5rem;
+  --docs-nav-height: 3.5rem;
 }
 
 /* ── Page sections ── */
