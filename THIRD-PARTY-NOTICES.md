@@ -1,7 +1,7 @@
 # Third-party notices
 
 The Handcrafted Design System is licensed under
-[design/LICENSE](./design/LICENSE). It includes the third-party materials
+[design/LICENSE.txt](./design/LICENSE.txt). It includes the third-party materials
 below, which are **not** covered by that license. Each remains under its own terms, and the notices here must be kept
 wherever the material is copied or distributed, including in deliverables.
 

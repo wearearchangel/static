@@ -2,12 +2,12 @@
   "name": "@wearearchangel/static",
   "version": "1.0.0",
   "description": "Handcrafted Design System — CSS baseline, tokens, and static assets",
-  "license": "SEE LICENSE IN design/LICENSE",
+  "license": "SEE LICENSE IN design/LICENSE.txt",
   "files": [
     "fonts/",
     "styles/",
     "manifest/",
-    "design/LICENSE",
+    "design/LICENSE.txt",
     "LICENSE",
     "THIRD-PARTY-NOTICES.md"
   ],

@@ -5,7 +5,7 @@ granted below.
 
 This repository contains more than one work. Each is licensed separately:
 
-  Handcrafted Design System     styles/, design/,        design/LICENSE
+  Handcrafted Design System     styles/, design/,        design/LICENSE.txt
                                 manifest/ and
                                 placeholder.*
   Mona Sans and Hubot Sans      fonts/                    fonts/OFL.txt
