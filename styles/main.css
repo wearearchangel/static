@@ -69,10 +69,11 @@
     --color-link-alt:      #1040b0;
 
     /* Interactive states */
-    --color-focus:         #1a56db;
-    --color-hover:         #e8e5e0;
+    --color-default:       #333b3c;
     --color-disabled:      #9a9896;
     --color-disabled-bg:   #d4d2ce;
+    --color-focus:         #1a56db;
+    --color-hover:         #e8e5e0;
 
     /* Brand */
     --color-primary:       #aad56a;
@@ -118,10 +119,11 @@
     --color-link-alt:      #aecffa;
 
     /* Interactive states */
-    --color-focus:         #7eb3f8;
-    --color-hover:         #2a4535;
+    --color-default:       #efefec;
     --color-disabled:      #5a5a58;
     --color-disabled-bg:   #2a3a30;
+    --color-focus:         #7eb3f8;
+    --color-hover:         #2a4535;
 
     /* Brand */
     --color-primary:       #aad56a;

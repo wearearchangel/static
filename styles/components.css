@@ -15,7 +15,7 @@
 
 .btn {
   /* Inherited from <button> in reset */
-  color: var(--color-text);
+  color: var(--color-default);
   background-color: var(--color-tint);
   border: 1px solid transparent;
   border-radius: var(--border-radius);
@@ -109,7 +109,7 @@
 .btn-outline {
   background-color: transparent;
   border-color: var(--color-border);
-  color: var(--color-text);
+  color: var(--color-default);
 }
 
 .btn-outline[disabled] {
@@ -126,7 +126,7 @@
 .btn-ghost {
   background-color: transparent;
   border-color: transparent;
-  color: var(--color-text);
+  color: var(--color-default);
 }
 
 .btn-ghost[disabled] {
