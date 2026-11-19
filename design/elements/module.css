@@ -1,0 +1,7 @@
+/* Styles scoped to /design/elements/. Load after /design/assets/docs.css. */
+
+/* Narrower page than the shared docs layout */
+body {
+  padding: 0 0.5rem;
+  max-width: 75ch;
+}
