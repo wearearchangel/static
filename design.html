@@ -1,14 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Handcrafted Design is The Archangel Interactive's in-house design system for building beautiful identities, experiences and products.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Handcrafted Design is The Archangel Interactive's in-house design system for building beautiful identities, experiences and products."
+    />
     <title>Handcrafted Design System — Reference</title>
 
-    <link rel="preload" href="fonts/hubot-sans.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/mona-sans.woff2" as="font" type="font/woff2">
-    <link rel="stylesheet" href="styles/main.css">
+    <link
+      rel="preload"
+      href="fonts/hubot-sans.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="fonts/mona-sans.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
 
     <style>
       body {
@@ -253,19 +266,19 @@
     </style>
   </head>
   <body>
-
     <!-- ─── Header ─────────────────────────────────────────── -->
-    <header role="banner" style="margin: 3rem 0 0;">
+    <header role="banner" style="margin: 3rem 0 0">
       <h1>Handcrafted Design System</h1>
       <p>
-        Visual reference for tokens, typography, and components.
-        Maintained by <b>Handcrafted Technologies</b>, the tech division of Archangel.
+        Visual reference for tokens, typography, and components. Maintained by
+        <b>Handcrafted Technologies</b>, the tech division of Archangel.
       </p>
       <p>Link in your <code>&lt;head&gt;</code> element:</p>
-      <pre class="usage-snippet">&lt;link rel="stylesheet" href="https://static.wearearchangel.com/styles/main.css" crossorigin&gt;</pre>
+      <pre class="usage-snippet">
+&lt;link rel="stylesheet" href="https://static.wearearchangel.com/styles/main.css" crossorigin&gt;</pre>
     </header>
 
-    <nav role="navigation" style="margin: 2rem 0;">
+    <nav role="navigation" style="margin: 2rem 0">
       <ul>
         <li><a href="#palette">Color palette</a></li>
         <li><a href="#typography">Typography</a></li>
@@ -275,7 +288,6 @@
     </nav>
 
     <main role="main">
-
       <!-- ─── Color palette ───────────────────────────────── -->
       <section id="palette" class="ds-section">
         <h2 class="ds-section-title">Color palette</h2>
@@ -284,7 +296,10 @@
           <p class="ds-subsection-title">Base</p>
           <div class="swatch-grid">
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-base)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-base)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-base</span>
                 <span class="swatch-value">#222222 / #fcf9fe</span>
@@ -297,21 +312,30 @@
           <p class="ds-subsection-title">Text</p>
           <div class="swatch-grid">
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-text)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-text)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-text</span>
                 <span class="swatch-value">#333b3c / #efefec</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-text-2)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-text-2)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-text-2</span>
                 <span class="swatch-value">darkslategray / lightgray</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-title)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-title)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-title</span>
                 <span class="swatch-value">#222222 / #fcf9fe</span>
@@ -324,28 +348,40 @@
           <p class="ds-subsection-title">Surfaces</p>
           <div class="swatch-grid">
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-background)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-background)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-background</span>
                 <span class="swatch-value">#fcf9fe / #222222</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-background-2)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-background-2)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-background-2</span>
                 <span class="swatch-value">#ffffff / #000000</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-tint)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-tint)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-tint</span>
                 <span class="swatch-value">--color-base / 10%</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-dim)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-dim)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-dim</span>
                 <span class="swatch-value">--color-base / 5%</span>
@@ -358,14 +394,20 @@
           <p class="ds-subsection-title">Borders</p>
           <div class="swatch-grid">
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-border)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-border)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-border</span>
                 <span class="swatch-value">--color-base / 15%</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-border-muted)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-border-muted)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-border-muted</span>
                 <span class="swatch-value">--color-base / 7.5%</span>
@@ -378,14 +420,20 @@
           <p class="ds-subsection-title">Links</p>
           <div class="swatch-grid">
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-link)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-link)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-link</span>
                 <span class="swatch-value">#1a56db / #7eb3f8</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-link-alt)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-link-alt)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-link-alt</span>
                 <span class="swatch-value">#1040b0 / #aecffa</span>
@@ -398,35 +446,50 @@
           <p class="ds-subsection-title">Interactive states</p>
           <div class="swatch-grid">
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-default)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-default)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-default</span>
                 <span class="swatch-value">#333b3c / #efefec</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-disabled)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-disabled)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-disabled</span>
                 <span class="swatch-value">#9a9896 / #5a5a58</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-disabled-bg)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-disabled-bg)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-disabled-bg</span>
                 <span class="swatch-value">#d4d2ce / #2a3a30</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-hover)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-hover)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-hover</span>
                 <span class="swatch-value">#e8e5e0 / #2a4535</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-focus)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-focus)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-focus</span>
                 <span class="swatch-value">#1a56db / #7eb3f8</span>
@@ -437,84 +500,149 @@
 
         <div class="ds-subsection">
           <p class="ds-subsection-title">Semantic status</p>
-          <p style="color: var(--color-text-2); font-size: 0.8rem; margin-bottom: 1rem;">
-            Each status has three tokens: foreground · surface · on-surface text.
+          <p
+            style="
+              color: var(--color-text-2);
+              font-size: 0.8rem;
+              margin-bottom: 1rem;
+            "
+          >
+            Each status has three tokens: foreground · surface · on-surface
+            text.
           </p>
 
           <!-- Success -->
           <div class="status-group">
-          <p class="status-group-label">Success</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-success);">
-              <span style="color: var(--color-on-success);">Aa</span>
-              <span style="color: var(--color-on-success);">--color-success</span>
+            <p class="status-group-label">Success</p>
+            <div class="status-trio">
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-success)"
+              >
+                <span style="color: var(--color-on-success)">Aa</span>
+                <span style="color: var(--color-on-success)"
+                  >--color-success</span
+                >
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-success-bg)"
+              >
+                <span style="color: var(--color-success)">Aa</span>
+                <span style="color: var(--color-success)"
+                  >--color-success-bg</span
+                >
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-success)"
+              >
+                <span style="color: var(--color-on-success); font-size: 1rem"
+                  >Aa</span
+                >
+                <span style="color: var(--color-on-success)"
+                  >--color-on-success</span
+                >
+              </div>
             </div>
-            <div class="status-trio-cell" style="background-color: var(--color-success-bg);">
-              <span style="color: var(--color-success);">Aa</span>
-              <span style="color: var(--color-success);">--color-success-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-success);">
-              <span style="color: var(--color-on-success); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-success);">--color-on-success</span>
-            </div>
-          </div>
           </div>
 
           <!-- Error -->
           <div class="status-group">
-          <p class="status-group-label">Error</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-error);">
-              <span style="color: var(--color-on-error);">Aa</span>
-              <span style="color: var(--color-on-error);">--color-error</span>
+            <p class="status-group-label">Error</p>
+            <div class="status-trio">
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-error)"
+              >
+                <span style="color: var(--color-on-error)">Aa</span>
+                <span style="color: var(--color-on-error)">--color-error</span>
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-error-bg)"
+              >
+                <span style="color: var(--color-error)">Aa</span>
+                <span style="color: var(--color-error)">--color-error-bg</span>
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-error)"
+              >
+                <span style="color: var(--color-on-error); font-size: 1rem"
+                  >Aa</span
+                >
+                <span style="color: var(--color-on-error)"
+                  >--color-on-error</span
+                >
+              </div>
             </div>
-            <div class="status-trio-cell" style="background-color: var(--color-error-bg);">
-              <span style="color: var(--color-error);">Aa</span>
-              <span style="color: var(--color-error);">--color-error-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-error);">
-              <span style="color: var(--color-on-error); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-error);">--color-on-error</span>
-            </div>
-          </div>
           </div>
 
           <!-- Warning -->
           <div class="status-group">
-          <p class="status-group-label">Warning</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-warning);">
-              <span style="color: var(--color-on-warning);">Aa</span>
-              <span style="color: var(--color-on-warning);">--color-warning</span>
+            <p class="status-group-label">Warning</p>
+            <div class="status-trio">
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-warning)"
+              >
+                <span style="color: var(--color-on-warning)">Aa</span>
+                <span style="color: var(--color-on-warning)"
+                  >--color-warning</span
+                >
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-warning-bg)"
+              >
+                <span style="color: var(--color-warning)">Aa</span>
+                <span style="color: var(--color-warning)"
+                  >--color-warning-bg</span
+                >
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-warning)"
+              >
+                <span style="color: var(--color-on-warning); font-size: 1rem"
+                  >Aa</span
+                >
+                <span style="color: var(--color-on-warning)"
+                  >--color-on-warning</span
+                >
+              </div>
             </div>
-            <div class="status-trio-cell" style="background-color: var(--color-warning-bg);">
-              <span style="color: var(--color-warning);">Aa</span>
-              <span style="color: var(--color-warning);">--color-warning-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-warning);">
-              <span style="color: var(--color-on-warning); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-warning);">--color-on-warning</span>
-            </div>
-          </div>
           </div>
 
           <!-- Info -->
           <div class="status-group">
-          <p class="status-group-label">Info</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-info);">
-              <span style="color: var(--color-on-info);">Aa</span>
-              <span style="color: var(--color-on-info);">--color-info</span>
+            <p class="status-group-label">Info</p>
+            <div class="status-trio">
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-info)"
+              >
+                <span style="color: var(--color-on-info)">Aa</span>
+                <span style="color: var(--color-on-info)">--color-info</span>
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-info-bg)"
+              >
+                <span style="color: var(--color-info)">Aa</span>
+                <span style="color: var(--color-info)">--color-info-bg</span>
+              </div>
+              <div
+                class="status-trio-cell"
+                style="background-color: var(--color-info)"
+              >
+                <span style="color: var(--color-on-info); font-size: 1rem"
+                  >Aa</span
+                >
+                <span style="color: var(--color-on-info)">--color-on-info</span>
+              </div>
             </div>
-            <div class="status-trio-cell" style="background-color: var(--color-info-bg);">
-              <span style="color: var(--color-info);">Aa</span>
-              <span style="color: var(--color-info);">--color-info-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-info);">
-              <span style="color: var(--color-on-info); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-info);">--color-on-info</span>
-            </div>
-          </div>
           </div>
         </div>
 
@@ -522,42 +650,60 @@
           <p class="ds-subsection-title">Brand</p>
           <div class="swatch-grid">
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-primary)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-primary)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-primary</span>
                 <span class="swatch-value">#aad56a</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-on-primary)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-on-primary)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-on-primary</span>
                 <span class="swatch-value">#29331a</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-secondary)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-secondary)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-secondary</span>
                 <span class="swatch-value">#29331a / #fcf9fe</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-on-secondary)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-on-secondary)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-on-secondary</span>
                 <span class="swatch-value">#fcf9fe / #29331a</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-accent)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-accent)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-accent</span>
                 <span class="swatch-value">#d6cd6b</span>
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-on-accent)"></div>
+              <div
+                class="swatch-color"
+                style="background-color: var(--color-on-accent)"
+              ></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-on-accent</span>
                 <span class="swatch-value">#29331a</span>
@@ -572,20 +718,43 @@
         <h2 class="ds-section-title">Typography</h2>
 
         <div class="ds-subsection">
-          <p class="ds-subsection-title">Heading scale — Hubot Sans (--font-display)</p>
-          <div class="type-row"><span class="type-meta">h1 · 2em</span><h1 style="margin: 0;">Heading one</h1></div>
-          <div class="type-row"><span class="type-meta">h2 · 1.5em</span><h2 style="margin: 0;">Heading two</h2></div>
-          <div class="type-row"><span class="type-meta">h3 · 1.2em</span><h3 style="margin: 0;">Heading three</h3></div>
-          <div class="type-row"><span class="type-meta">h4 · 1em</span><h4 style="margin: 0;">Heading four</h4></div>
-          <div class="type-row"><span class="type-meta">h5 · 1em upper</span><h5 style="margin: 0;">Heading five</h5></div>
-          <div class="type-row"><span class="type-meta">h6 · 1em upper</span><h6 style="margin: 0;">Heading six</h6></div>
+          <p class="ds-subsection-title">
+            Heading scale — Hubot Sans (--font-display)
+          </p>
+          <div class="type-row">
+            <span class="type-meta">h1 · 2em</span>
+            <h1 style="margin: 0">Heading one</h1>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">h2 · 1.5em</span>
+            <h2 style="margin: 0">Heading two</h2>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">h3 · 1.2em</span>
+            <h3 style="margin: 0">Heading three</h3>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">h4 · 1em</span>
+            <h4 style="margin: 0">Heading four</h4>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">h5 · 1em upper</span>
+            <h5 style="margin: 0">Heading five</h5>
+          </div>
+          <div class="type-row">
+            <span class="type-meta">h6 · 1em upper</span>
+            <h6 style="margin: 0">Heading six</h6>
+          </div>
         </div>
 
         <div class="ds-subsection">
           <p class="ds-subsection-title">Body — Mona Sans (--font-sans)</p>
           <div class="type-row">
-            <span class="type-meta">--font-text<br>1rem / 1.5</span>
-            <p style="margin: 0;">The quick brown fox jumps over the lazy dog. A baseline stylesheet maintained by Handcrafted Technologies.</p>
+            <span class="type-meta">--font-text<br />1rem / 1.5</span>
+            <p style="margin: 0">
+              The quick brown fox jumps over the lazy dog. A baseline stylesheet
+              maintained by Handcrafted Technologies.
+            </p>
           </div>
           <div class="type-row">
             <span class="type-meta">--font-mono</span>
@@ -598,23 +767,68 @@
           <div class="type-weight-row">
             <div>
               <p class="type-weight-sample">font-weight: 200</p>
-              <p style="font-family: var(--font-sans); font-weight: 200; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+              <p
+                style="
+                  font-family: var(--font-sans);
+                  font-weight: 200;
+                  font-size: 1.25rem;
+                  margin: 0;
+                "
+              >
+                Handcrafted
+              </p>
             </div>
             <div>
               <p class="type-weight-sample">font-weight: 400</p>
-              <p style="font-family: var(--font-sans); font-weight: 400; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+              <p
+                style="
+                  font-family: var(--font-sans);
+                  font-weight: 400;
+                  font-size: 1.25rem;
+                  margin: 0;
+                "
+              >
+                Handcrafted
+              </p>
             </div>
             <div>
               <p class="type-weight-sample">font-weight: 600</p>
-              <p style="font-family: var(--font-sans); font-weight: 600; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+              <p
+                style="
+                  font-family: var(--font-sans);
+                  font-weight: 600;
+                  font-size: 1.25rem;
+                  margin: 0;
+                "
+              >
+                Handcrafted
+              </p>
             </div>
             <div>
               <p class="type-weight-sample">font-weight: 800</p>
-              <p style="font-family: var(--font-sans); font-weight: 800; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+              <p
+                style="
+                  font-family: var(--font-sans);
+                  font-weight: 800;
+                  font-size: 1.25rem;
+                  margin: 0;
+                "
+              >
+                Handcrafted
+              </p>
             </div>
             <div>
               <p class="type-weight-sample">font-weight: 900</p>
-              <p style="font-family: var(--font-sans); font-weight: 900; font-size: 1.25rem; margin: 0;">Handcrafted</p>
+              <p
+                style="
+                  font-family: var(--font-sans);
+                  font-weight: 900;
+                  font-size: 1.25rem;
+                  margin: 0;
+                "
+              >
+                Handcrafted
+              </p>
             </div>
           </div>
         </div>
@@ -627,13 +841,34 @@
         <div class="ds-subsection">
           <p class="ds-subsection-title">Spacing scale</p>
           <div class="spacing-grid">
-            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-1)"></div><span class="spacing-meta">--spacing-1 · 4px</span></div>
-            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-2)"></div><span class="spacing-meta">--spacing-2 · 8px</span></div>
-            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-3)"></div><span class="spacing-meta">--spacing-3 · 12px</span></div>
-            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-4)"></div><span class="spacing-meta">--spacing-4 · 16px</span></div>
-            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-5)"></div><span class="spacing-meta">--spacing-5 · 20px</span></div>
-            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-6)"></div><span class="spacing-meta">--spacing-6 · 24px</span></div>
-            <div class="spacing-row"><div class="spacing-bar" style="width: var(--spacing-8)"></div><span class="spacing-meta">--spacing-8 · 32px</span></div>
+            <div class="spacing-row">
+              <div class="spacing-bar" style="width: var(--spacing-1)"></div>
+              <span class="spacing-meta">--spacing-1 · 4px</span>
+            </div>
+            <div class="spacing-row">
+              <div class="spacing-bar" style="width: var(--spacing-2)"></div>
+              <span class="spacing-meta">--spacing-2 · 8px</span>
+            </div>
+            <div class="spacing-row">
+              <div class="spacing-bar" style="width: var(--spacing-3)"></div>
+              <span class="spacing-meta">--spacing-3 · 12px</span>
+            </div>
+            <div class="spacing-row">
+              <div class="spacing-bar" style="width: var(--spacing-4)"></div>
+              <span class="spacing-meta">--spacing-4 · 16px</span>
+            </div>
+            <div class="spacing-row">
+              <div class="spacing-bar" style="width: var(--spacing-5)"></div>
+              <span class="spacing-meta">--spacing-5 · 20px</span>
+            </div>
+            <div class="spacing-row">
+              <div class="spacing-bar" style="width: var(--spacing-6)"></div>
+              <span class="spacing-meta">--spacing-6 · 24px</span>
+            </div>
+            <div class="spacing-row">
+              <div class="spacing-bar" style="width: var(--spacing-8)"></div>
+              <span class="spacing-meta">--spacing-8 · 32px</span>
+            </div>
           </div>
         </div>
 
@@ -641,28 +876,46 @@
           <p class="ds-subsection-title">Border radius scale</p>
           <div class="radius-grid">
             <div>
-              <div class="radius-swatch" style="border-radius: var(--radius-none)"></div>
-              <p class="radius-meta">--radius-none<br>0</p>
+              <div
+                class="radius-swatch"
+                style="border-radius: var(--radius-none)"
+              ></div>
+              <p class="radius-meta">--radius-none<br />0</p>
             </div>
             <div>
-              <div class="radius-swatch" style="border-radius: var(--radius-sm)"></div>
-              <p class="radius-meta">--radius-sm<br>4px</p>
+              <div
+                class="radius-swatch"
+                style="border-radius: var(--radius-sm)"
+              ></div>
+              <p class="radius-meta">--radius-sm<br />4px</p>
             </div>
             <div>
-              <div class="radius-swatch" style="border-radius: var(--radius-md)"></div>
-              <p class="radius-meta">--radius-md<br>6px</p>
+              <div
+                class="radius-swatch"
+                style="border-radius: var(--radius-md)"
+              ></div>
+              <p class="radius-meta">--radius-md<br />6px</p>
             </div>
             <div>
-              <div class="radius-swatch" style="border-radius: var(--radius-lg)"></div>
-              <p class="radius-meta">--radius-lg<br>8px</p>
+              <div
+                class="radius-swatch"
+                style="border-radius: var(--radius-lg)"
+              ></div>
+              <p class="radius-meta">--radius-lg<br />8px</p>
             </div>
             <div>
-              <div class="radius-swatch" style="border-radius: var(--radius-xl)"></div>
-              <p class="radius-meta">--radius-xl<br>16px</p>
+              <div
+                class="radius-swatch"
+                style="border-radius: var(--radius-xl)"
+              ></div>
+              <p class="radius-meta">--radius-xl<br />16px</p>
             </div>
             <div>
-              <div class="radius-swatch" style="border-radius: var(--radius-full)"></div>
-              <p class="radius-meta">--radius-full<br>∞</p>
+              <div
+                class="radius-swatch"
+                style="border-radius: var(--radius-full)"
+              ></div>
+              <p class="radius-meta">--radius-full<br />∞</p>
             </div>
           </div>
         </div>
@@ -697,15 +950,23 @@
             <p class="component-label">Disabled Variants</p>
             <div class="component-row">
               <button type="button" disabled>Default</button>
-              <button type="button" class="btn-primary" disabled>Primary</button>
-              <button type="button" class="btn-secondary" disabled>Secondary</button>
+              <button type="button" class="btn-primary" disabled>
+                Primary
+              </button>
+              <button type="button" class="btn-secondary" disabled>
+                Secondary
+              </button>
               <button type="button" class="btn-accent" disabled>Accent</button>
             </div>
             <div class="component-row">
               <button type="button" class="btn-danger" disabled>Danger</button>
-              <button type="button" class="btn-warning" disabled>Warning</button>
+              <button type="button" class="btn-warning" disabled>
+                Warning
+              </button>
               <button type="button" class="btn-info" disabled>Info</button>
-              <button type="button" class="btn-outline" disabled>Outline</button>
+              <button type="button" class="btn-outline" disabled>
+                Outline
+              </button>
               <button type="button" class="btn-ghost" disabled>Ghost</button>
             </div>
           </div>
@@ -750,31 +1011,33 @@
 
           <div class="field">
             <label for="ds-default">Default</label>
-            <input id="ds-default" type="text" placeholder="e.g. John Doe">
-            <p class="field-hint">Enter your full name as it appears on your ticket.</p>
+            <input id="ds-default" type="text" placeholder="e.g. John Doe" />
+            <p class="field-hint">
+              Enter your full name as it appears on your ticket.
+            </p>
           </div>
 
           <div class="field field--success">
             <label for="ds-success">Ticket code</label>
-            <input id="ds-success" type="text" value="A-4821">
+            <input id="ds-success" type="text" value="A-4821" />
             <p class="field-message">Seat found and validated.</p>
           </div>
 
           <div class="field field--error">
             <label for="ds-error">Ticket code</label>
-            <input id="ds-error" type="text" value="A-4821">
+            <input id="ds-error" type="text" value="A-4821" />
             <p class="field-message">Seat not found or invalid.</p>
           </div>
 
           <div class="field field--warning">
             <label for="ds-warning">Ticket code</label>
-            <input id="ds-warning" type="text" value="A-4821">
+            <input id="ds-warning" type="text" value="A-4821" />
             <p class="field-message">Seat may already be reserved.</p>
           </div>
 
           <div class="field field--info">
             <label for="ds-info">Ticket code</label>
-            <input id="ds-info" type="text" value="A-4821">
+            <input id="ds-info" type="text" value="A-4821" />
             <p class="field-message">Seat can be resold.</p>
           </div>
         </div>
@@ -792,23 +1055,25 @@
               <span>Check-in confirmed</span>
               <span class="badge badge-success">Success</span>
             </h3>
-            <p>Ticket #A-4821 has been validated. The attendee may proceed to the venue.</p>
+            <p>
+              Ticket #A-4821 has been validated. The attendee may proceed to the
+              venue.
+            </p>
             <button type="button" class="btn-ghost btn-sm">View details</button>
           </div>
         </div>
       </section>
-
     </main>
 
     <footer role="contentinfo">
-      <hr>
+      <hr />
       <p>
         <small>
-          Handcrafted Design System by Handcrafted Technologies.
-          Based on <a href="https://git.sr.ht/~bt/vanilla-css">vanilla-css</a> by Bradley Taunt.
+          Handcrafted Design System by Handcrafted Technologies. Based on
+          <a href="https://git.sr.ht/~bt/vanilla-css">vanilla-css</a> by Bradley
+          Taunt.
         </small>
       </p>
     </footer>
-
   </body>
 </html>

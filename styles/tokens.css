@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'Mona Sans';
+  font-family: "Mona Sans";
   src:
-    url('../fonts/mona-sans.woff2') format('woff2 supports variations'),
-    url('../fonts/mona-sans.woff2') format('woff2-variations');
+    url("../fonts/mona-sans.woff2") format("woff2 supports variations"),
+    url("../fonts/mona-sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
 
 @font-face {
-  font-family: 'Hubot Sans';
+  font-family: "Hubot Sans";
   src:
-    url('../fonts/hubot-sans.woff2') format('woff2 supports variations'),
-    url('../fonts/hubot-sans.woff2') format('woff2-variations');
+    url("../fonts/hubot-sans.woff2") format("woff2 supports variations"),
+    url("../fonts/hubot-sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
@@ -19,7 +19,9 @@
 /* Internal variables - structural helpers, not utility-generating */
 :root {
   color-scheme: light dark;
-  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-system:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
   --font-title: var(--text-xl)/var(--text-xl--line-height) var(--font-display);
   --font-text: var(--text-base)/var(--text-base--line-height) var(--font-sans);
@@ -35,114 +37,124 @@
   --color-*: initial;
 
   /* Font families → font-sans, font-display, font-mono utilities */
-  --font-mono:    ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono,
+    monospace;
   --font-display: "Hubot Sans", "Hubot SansHeaderFallback", var(--font-system);
-  --font-sans:    "Mona Sans", "MonaSansFallback", var(--font-system);
+  --font-sans: "Mona Sans", "MonaSansFallback", var(--font-system);
 
   /* Base - drives the color-mix() surface and border tints */
-  --color-base:          #222222;
+  --color-base: #222222;
 
   /* Text */
-  --color-text:          #333b3c;
-  --color-text-2:        darkslategray;
-  --color-title:         #222222;
+  --color-text: #333b3c;
+  --color-text-2: darkslategray;
+  --color-title: #222222;
 
   /* Surfaces */
-  --color-background:    #fcf9fe;
-  --color-background-2:  #ffffff;
-  --color-tint:          color-mix(in oklab, var(--color-base) 10%, transparent);
-  --color-dim:           color-mix(in oklab, var(--color-base) 5%, transparent);
+  --color-background: #fcf9fe;
+  --color-background-2: #ffffff;
+  --color-tint: color-mix(in oklab, var(--color-base) 10%, transparent);
+  --color-dim: color-mix(in oklab, var(--color-base) 5%, transparent);
 
   /* Borders */
-  --color-border:        color-mix(in oklab, var(--color-base) 15%, transparent);
-  --color-border-muted:  color-mix(in oklab, var(--color-base) 7.5%, transparent);
+  --color-border: color-mix(in oklab, var(--color-base) 15%, transparent);
+  --color-border-muted: color-mix(
+    in oklab,
+    var(--color-base) 7.5%,
+    transparent
+  );
 
   /* Links */
-  --color-link:          #1a56db;
-  --color-link-alt:      #1040b0;
+  --color-link: #1a56db;
+  --color-link-alt: #1040b0;
 
   /* Interactive states */
-  --color-default:       #333b3c;
-  --color-disabled:      #9a9896;
-  --color-disabled-bg:   #d4d2ce;
-  --color-focus:         #1a56db;
-  --color-hover:         #e8e5e0;
+  --color-default: #333b3c;
+  --color-disabled: #9a9896;
+  --color-disabled-bg: #d4d2ce;
+  --color-focus: #1a56db;
+  --color-hover: #e8e5e0;
 
   /* Brand */
-  --color-primary:       #aad56a;
-  --color-on-primary:    #29331a;
-  --color-secondary:     #29331a;
-  --color-on-secondary:  #fcf9fe;
-  --color-accent:        #d6cd6b;
-  --color-on-accent:     #29331a;
+  --color-primary: #aad56a;
+  --color-on-primary: #29331a;
+  --color-secondary: #29331a;
+  --color-on-secondary: #fcf9fe;
+  --color-accent: #d6cd6b;
+  --color-on-accent: #29331a;
 
   /* Semantic status colors */
-  --color-success:       #1a7a4a;
-  --color-success-bg:    #d8f3e5;
-  --color-on-success:    #fcf9fe;
-  --color-error:         #c0392b;
-  --color-error-bg:      #fde8e8;
-  --color-on-error:      #fcf9fe;
-  --color-warning:       #b45309;
-  --color-warning-bg:    #fef3c7;
-  --color-on-warning:    #fcf9fe;
-  --color-info:          #0369a1;
-  --color-info-bg:       #e0f2fe;
-  --color-on-info:       #fcf9fe;
+  --color-success: #1a7a4a;
+  --color-success-bg: #d8f3e5;
+  --color-on-success: #fcf9fe;
+  --color-error: #c0392b;
+  --color-error-bg: #fde8e8;
+  --color-on-error: #fcf9fe;
+  --color-warning: #b45309;
+  --color-warning-bg: #fef3c7;
+  --color-on-warning: #fcf9fe;
+  --color-info: #0369a1;
+  --color-info-bg: #e0f2fe;
+  --color-on-info: #fcf9fe;
 }
 
 /* Dark mode - overrides the @theme values on :root */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-base:          #fcf9fe;
+    --color-base: #fcf9fe;
 
     /* Text */
-    --color-text:          #efefec;
-    --color-text-2:        lightgray;
-    --color-title:         #fcf9fe;
+    --color-text: #efefec;
+    --color-text-2: lightgray;
+    --color-title: #fcf9fe;
 
     /* Surfaces */
-    --color-background:    #222222;
-    --color-background-2:  #000000;
-    --color-tint:          color-mix(in oklab, var(--color-base) 10%, transparent);
-    --color-dim:           color-mix(in oklab, var(--color-base) 5%, transparent);
+    --color-background: #222222;
+    --color-background-2: #000000;
+    --color-tint: color-mix(in oklab, var(--color-base) 10%, transparent);
+    --color-dim: color-mix(in oklab, var(--color-base) 5%, transparent);
 
     /* Borders */
-    --color-border:        color-mix(in oklab, var(--color-base) 15%, transparent);
-    --color-border-muted:  color-mix(in oklab, var(--color-base) 7.5%, transparent);
+    --color-border: color-mix(in oklab, var(--color-base) 15%, transparent);
+    --color-border-muted: color-mix(
+      in oklab,
+      var(--color-base) 7.5%,
+      transparent
+    );
 
     /* Links */
-    --color-link:          #7eb3f8;
-    --color-link-alt:      #aecffa;
+    --color-link: #7eb3f8;
+    --color-link-alt: #aecffa;
 
     /* Interactive states */
-    --color-default:       #efefec;
-    --color-disabled:      #5a5a58;
-    --color-disabled-bg:   #2a3a30;
-    --color-focus:         #7eb3f8;
-    --color-hover:         #2a4535;
+    --color-default: #efefec;
+    --color-disabled: #5a5a58;
+    --color-disabled-bg: #2a3a30;
+    --color-focus: #7eb3f8;
+    --color-hover: #2a4535;
 
     /* Brand */
-    --color-primary:       #aad56a;
-    --color-on-primary:    #29331a;
-    --color-secondary:     #fcf9fe;
-    --color-on-secondary:  #29331a;
-    --color-accent:        #d6cd6b;
-    --color-on-accent:     #29331a;
+    --color-primary: #aad56a;
+    --color-on-primary: #29331a;
+    --color-secondary: #fcf9fe;
+    --color-on-secondary: #29331a;
+    --color-accent: #d6cd6b;
+    --color-on-accent: #29331a;
 
     /* Semantic status colors */
-    --color-success:       #1a7a4a;
-    --color-success-bg:    #052e16;
-    --color-on-success:    #fcf9fe;
-    --color-error:         #c0392b;
-    --color-error-bg:      #2d0f0f;
-    --color-on-error:      #fcf9fe;
-    --color-warning:       #b45309;
-    --color-warning-bg:    #2d1f0a;
-    --color-on-warning:    #fcf9fe;
-    --color-info:          #0369a1;
-    --color-info-bg:       #0a1e2e;
-    --color-on-info:       #fcf9fe;
+    --color-success: #1a7a4a;
+    --color-success-bg: #052e16;
+    --color-on-success: #fcf9fe;
+    --color-error: #c0392b;
+    --color-error-bg: #2d0f0f;
+    --color-on-error: #fcf9fe;
+    --color-warning: #b45309;
+    --color-warning-bg: #2d1f0a;
+    --color-on-warning: #fcf9fe;
+    --color-info: #0369a1;
+    --color-info-bg: #0a1e2e;
+    --color-on-info: #fcf9fe;
   }
 }
 
@@ -287,7 +299,12 @@
     color: var(--color-title);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     color: var(--color-title);
   }
