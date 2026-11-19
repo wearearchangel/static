@@ -73,3 +73,12 @@ frontend:
       headers:
         - key: Cache-Control
           value: public, max-age=604800
+    # Notices are linked from the docs footers. Serve them as readable text
+    # (text/markdown makes browsers download the file) and cache briefly so
+    # a corrected notice is not stuck at the CDN edge.
+    - pattern: "*.md"
+      headers:
+        - key: Content-Type
+          value: text/plain; charset=utf-8
+        - key: Cache-Control
+          value: public, max-age=300
