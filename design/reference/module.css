@@ -182,6 +182,22 @@
   margin-bottom: 2rem;
 }
 
+/* ── Placeholder assets ── */
+.placeholder-preview {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 10rem;
+}
+
+/* Uniform thumbnails. Scoped to the docs preview, not the baseline, so videos
+   elsewhere keep their own aspect ratio. Audio has fixed-height controls. */
+img.placeholder-preview,
+video.placeholder-preview {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 /* ── Samples: Cards, alerts, etc. ── */
 .card {
   background-color: var(--color-tint);
