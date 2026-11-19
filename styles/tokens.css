@@ -39,99 +39,110 @@
   --font-display: "Hubot Sans", "Hubot SansHeaderFallback", var(--font-system);
   --font-sans:    "Mona Sans", "MonaSansFallback", var(--font-system);
 
+  /* Base - drives the color-mix() surface and border tints */
+  --color-base:          #222222;
+
   /* Text */
   --color-text:          #333b3c;
   --color-text-2:        darkslategray;
-  --color-title:         black;
+  --color-title:         #222222;
 
   /* Surfaces */
-  --color-background:    #efedea;
-  --color-background-2:  white;
-  --color-tint:          #f5f3ef;
-  --color-dim:           #eceae5;
+  --color-background:    #fcf9fe;
+  --color-background-2:  #ffffff;
+  --color-tint:          color-mix(in oklab, var(--color-base) 10%, transparent);
+  --color-dim:           color-mix(in oklab, var(--color-base) 5%, transparent);
 
   /* Borders */
-  --color-border:        #c8c4ba;
-  --color-border-muted:  #dddbd2;
+  --color-border:        color-mix(in oklab, var(--color-base) 15%, transparent);
+  --color-border-muted:  color-mix(in oklab, var(--color-base) 7.5%, transparent);
 
   /* Links */
   --color-link:          #1a56db;
   --color-link-alt:      #1040b0;
 
   /* Interactive states */
-  --color-focus:         #1a56db;
-  --color-hover:         #e8e5e0;
+  --color-default:       #333b3c;
   --color-disabled:      #9a9896;
   --color-disabled-bg:   #d4d2ce;
+  --color-focus:         #1a56db;
+  --color-hover:         #e8e5e0;
 
   /* Brand */
   --color-primary:       #aad56a;
-  --color-on-primary:    #222222;
-  --color-secondary:     #222222;
-  --color-on-secondary:  #c0c0c0;
+  --color-on-primary:    #29331a;
+  --color-secondary:     #29331a;
+  --color-on-secondary:  #fcf9fe;
+  --color-accent:        #d6cd6b;
+  --color-on-accent:     #29331a;
 
   /* Semantic status colors */
   --color-success:       #1a7a4a;
   --color-success-bg:    #d8f3e5;
-  --color-on-success:    #ffffff;
+  --color-on-success:    #fcf9fe;
   --color-error:         #c0392b;
   --color-error-bg:      #fde8e8;
-  --color-on-error:      #ffffff;
+  --color-on-error:      #fcf9fe;
   --color-warning:       #b45309;
   --color-warning-bg:    #fef3c7;
-  --color-on-warning:    #ffffff;
+  --color-on-warning:    #fcf9fe;
   --color-info:          #0369a1;
   --color-info-bg:       #e0f2fe;
-  --color-on-info:       #ffffff;
+  --color-on-info:       #fcf9fe;
 }
 
 /* Dark mode - overrides the @theme values on :root */
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-base:          #fcf9fe;
+
     /* Text */
     --color-text:          #efefec;
     --color-text-2:        lightgray;
-    --color-title:         white;
+    --color-title:         #fcf9fe;
 
     /* Surfaces */
-    --color-background:    #223a2c;
-    --color-background-2:  black;
-    --color-tint:          #1c3023;
-    --color-dim:           #182a1e;
+    --color-background:    #222222;
+    --color-background-2:  #000000;
+    --color-tint:          color-mix(in oklab, var(--color-base) 10%, transparent);
+    --color-dim:           color-mix(in oklab, var(--color-base) 5%, transparent);
 
     /* Borders */
-    --color-border:        #4a6741;
-    --color-border-muted:  #3a5233;
+    --color-border:        color-mix(in oklab, var(--color-base) 15%, transparent);
+    --color-border-muted:  color-mix(in oklab, var(--color-base) 7.5%, transparent);
 
     /* Links */
     --color-link:          #7eb3f8;
     --color-link-alt:      #aecffa;
 
     /* Interactive states */
-    --color-focus:         #7eb3f8;
-    --color-hover:         #2a4535;
+    --color-default:       #efefec;
     --color-disabled:      #5a5a58;
     --color-disabled-bg:   #2a3a30;
+    --color-focus:         #7eb3f8;
+    --color-hover:         #2a4535;
 
     /* Brand */
     --color-primary:       #aad56a;
-    --color-on-primary:    #222222;
-    --color-secondary:     #ffffff;
-    --color-on-secondary:  #4b4b4b;
+    --color-on-primary:    #29331a;
+    --color-secondary:     #fcf9fe;
+    --color-on-secondary:  #29331a;
+    --color-accent:        #d6cd6b;
+    --color-on-accent:     #29331a;
 
     /* Semantic status colors */
-    --color-success:       #34d399;
+    --color-success:       #1a7a4a;
     --color-success-bg:    #052e16;
-    --color-on-success:    #222222;
-    --color-error:         #f87171;
+    --color-on-success:    #fcf9fe;
+    --color-error:         #c0392b;
     --color-error-bg:      #2d0f0f;
-    --color-on-error:      #222222;
-    --color-warning:       #fbbf24;
+    --color-on-error:      #fcf9fe;
+    --color-warning:       #b45309;
     --color-warning-bg:    #2d1f0a;
-    --color-on-warning:    #222222;
-    --color-info:          #38bdf8;
+    --color-on-warning:    #fcf9fe;
+    --color-info:          #0369a1;
     --color-info-bg:       #0a1e2e;
-    --color-on-info:       #222222;
+    --color-on-info:       #fcf9fe;
   }
 }
 
