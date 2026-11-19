@@ -77,9 +77,9 @@
 
     /* Brand */
     --color-primary:       #aad56a;
-    --color-on-primary:    #222222;
-    --color-secondary:     #222222;
-    --color-on-secondary:  #c0c0c0;
+    --color-on-primary:    #29331a;
+    --color-secondary:     #29331a;
+    --color-on-secondary:  #fcf9fe;
 
     /* Semantic status colors */
     --color-success:     #1a7a4a;
@@ -127,9 +127,9 @@
 
     /* Brand */
     --color-primary:       #aad56a;
-    --color-on-primary:    #222222;
-    --color-secondary:     #ffffff;
-    --color-on-secondary:  #4b4b4b;
+    --color-on-primary:    #29331a;
+    --color-secondary:     #fcf9fe;
+    --color-on-secondary:  #29331a;
 
     /* Semantic status colors */
     --color-success:     #34d399;
