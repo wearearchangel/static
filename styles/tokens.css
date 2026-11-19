@@ -43,6 +43,23 @@
   --font-display: "Hubot Sans", "Hubot SansHeaderFallback", var(--font-system);
   --font-sans: "Mona Sans", "MonaSansFallback", var(--font-system);
 
+  /* Spacing scale → p-*, m-*, gap-*, w-*, h-* utilities */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+
+  /* Border-radius scale → rounded-* utilities */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-full: calc(infinity * 1px);
+  --radius-none: 0;
+
   /* Base - drives the color-mix() surface and border tints */
   --color-base: #222222;
 
