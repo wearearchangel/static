@@ -185,7 +185,6 @@
 /* ── Placeholder assets ── */
 .placeholder-preview {
   display: block;
-  height: auto;
   max-width: 100%;
   width: 10rem;
 }
@@ -195,7 +194,14 @@
 img.placeholder-preview,
 video.placeholder-preview {
   aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: cover;
+}
+
+/* No height here: the browser sizes the audio controls itself, and
+   `height: auto` can collapse them to nothing. */
+audio.placeholder-preview {
+  width: 14rem;
 }
 
 /* ── Samples: Cards, alerts, etc. ── */
