@@ -26,6 +26,13 @@ frontend:
       headers:
         - key: Cache-Control
           value: no-cache
+    # Docs stylesheets (shared docs.css and per-page module.css) change
+    # alongside the pages, so cache briefly. Listed after the rule above
+    # so the more specific pattern follows the general one.
+    - pattern: "design/**/*.css"
+      headers:
+        - key: Cache-Control
+          value: public, max-age=300
     # Fonts — large, stable; cache aggressively
     - pattern: "fonts/**"
       headers:
