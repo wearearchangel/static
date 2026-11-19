@@ -5,7 +5,7 @@
 
 body {
   padding: 0 1.5rem 4rem;
-  max-width: 80ch;
+  max-width: 1028px;
 }
 
 /* Keep deep-linked sections (#foundations/color, ...) clear of the top edge */
