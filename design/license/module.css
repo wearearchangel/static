@@ -1,0 +1,32 @@
+/* Styles scoped to /design/license/. Load after /design/assets/docs.css. */
+
+/* Draft notice. Uses the warning status tokens so it reads in light and dark. */
+.draft-note {
+  background-color: var(--color-warning-bg);
+  border: 1px solid var(--color-warning);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+}
+
+.draft-note p {
+  margin: 0;
+}
+
+.draft-note p + p {
+  margin-top: 0.5rem;
+}
+
+/* Lettered clauses, (a) (b) (c), set slightly in from the body text. */
+.clause {
+  margin-block: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+/* A section heading is followed by its text, so keep it close. */
+.license-text h2 {
+  font: var(--font-title);
+  color: var(--color-title);
+  margin-block: 3rem 0;
+}

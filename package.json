@@ -17,14 +17,17 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "license:build": "node scripts/license-page.mjs --write && prettier --write design/license/index.html",
+    "license:check": "node scripts/license-page.mjs --check"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,json,css}": [
       "eslint --fix --no-warn-ignored",
       "prettier --write"
     ],
-    "*.{html,md,yml,yaml}": "prettier --write"
+    "*.{html,md,yml,yaml}": "prettier --write",
+    "design/{LICENSE.txt,license/index.html}": "node scripts/license-page.mjs --check"
   },
   "exports": {
     "./tokens": "./styles/tokens.css",
