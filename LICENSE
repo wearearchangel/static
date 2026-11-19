@@ -1,0 +1,19 @@
+The Archangel Interactive - static
+
+Copyright (c) 2026 The Archangel Interactive. All rights reserved, except as
+granted below.
+
+This repository contains more than one work. Each is licensed separately:
+
+  Handcrafted Design System     styles/, design/,        design/LICENSE
+                                manifest/ and
+                                placeholder.*
+  Mona Sans and Hubot Sans      fonts/                    fonts/OFL.txt
+                                                          (SIL OFL 1.1)
+  Third-party code              see THIRD-PARTY-NOTICES.md, each under its
+                                own licence
+
+Everything else in this repository is not licensed for use, copying,
+modification or distribution. All rights are reserved.
+
+Nothing in this file grants any right. The licences named above do.

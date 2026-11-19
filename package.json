@@ -2,11 +2,14 @@
   "name": "@wearearchangel/static",
   "version": "1.0.0",
   "description": "Handcrafted Design System — CSS baseline, tokens, and static assets",
-  "license": "MIT",
+  "license": "SEE LICENSE IN design/LICENSE",
   "files": [
     "fonts/",
     "styles/",
-    "manifest/"
+    "manifest/",
+    "design/LICENSE",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md"
   ],
   "scripts": {
     "dev": "serve .",

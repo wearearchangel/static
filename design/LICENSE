@@ -1,0 +1,190 @@
+Handcrafted Design System - License Agreement
+
+Copyright (c) 2026 The Archangel Interactive. All rights reserved.
+
+Last updated: 19 November 2026.
+
+This License Agreement ("Agreement") applies to the Handcrafted Design System
+published by Handcrafted Technologies, the tech division of The Archangel
+Interactive ("Archangel"). By using the Design System you accept this
+Agreement.
+
+
+1. DEFINITIONS
+
+"Group" means Archangel, its subsidiaries and affiliated companies, and the
+teams and personnel (including contractors working under their direction)
+acting on their behalf.
+
+"Design System" means the Handcrafted Design System, consisting of the
+files in the styles/ and design/ directories of this repository (and as
+served from https://static.wearearchangel.com/styles/ and
+https://static.wearearchangel.com/design/), including its stylesheets,
+design tokens, components, documentation and source code, together with the
+Starter Assets, but excluding Third-Party Components. Other files in this
+repository, including fonts/, are not part of the Design System.
+
+"Starter Assets" means the files in the manifest/ directory and the files
+named placeholder.* at the root of this repository (and as served from
+https://static.wearearchangel.com/manifest/ and
+https://static.wearearchangel.com/placeholder.*). They are placeholder
+icons, images, media and documents that are meant to be used as a starting
+point and replaced.
+
+"Third-Party Components" means the materials identified in the
+THIRD-PARTY-NOTICES.md file at the repository root and in fonts/OFL.txt,
+which are licensed to you by their own authors under their own terms.
+Where a file in the Design System is derived from a Third-Party Component,
+this Agreement applies only to Archangel's own contributions to that file.
+
+"Client" means a person or organisation for which a member of the Group
+creates a Deliverable.
+
+"Deliverable" means any website, application, product, document or other work
+that incorporates or is built with the Design System and is created by a
+member of the Group either for a Client or for the Group's own internal or
+proprietary use.
+
+
+2. LICENSE GRANT
+
+Subject to this Agreement, Archangel grants each member of the Group
+a limited, worldwide, royalty-free, non-exclusive and non-transferable
+license to:
+
+(a) use and reproduce the Design System;
+(b) modify the Design System and create derivative works of it; and
+(c) incorporate the Design System, and derivative works of it, into
+    Deliverables, and host, deliver and distribute those Deliverables.
+
+Starter Assets. You may use, copy, modify and replace the Starter Assets,
+include them in Deliverables, and ship them to end users (for example as
+default or fallback content). A Deliverable may also load them at runtime
+from https://static.wearearchangel.com/. Archangel may change, rename or
+remove Starter Assets, or stop serving them, at any time and without notice,
+and does not promise that any file path will stay available. If a
+Deliverable needs a Starter Asset to remain available, copy the file into
+the Deliverable. Files you create to replace Starter Assets are not part of
+the Design System and belong to you or your Client.
+
+
+3. DELIVERABLES AND CLIENTS
+
+A member of the Group may grant a Client a sublicense to use, host
+and maintain the Design System, and modify it for that purpose, only as
+incorporated in the Deliverable (including where the Deliverable loads
+Starter Assets at runtime under Section 2) and only for the Client's own
+business use of that Deliverable.
+
+A Client has no right to extract the Design System from the Deliverable,
+distribute it separately, or use it to build products or services for third
+parties other than through the Deliverable itself.
+
+A sublicense granted under this Section for a Deliverable delivered before
+this Agreement ends continues for that Deliverable.
+
+
+4. LICENSE RESTRICTIONS
+
+You may not, and must not permit anyone else to:
+
+(a) distribute, publish or make available the Design System, or a fork,
+    template, package or derivative of it, on a standalone basis to anyone
+    outside the Group, except as incorporated in a Deliverable
+    under Section 3;
+(b) sell, lease, sublicense or otherwise commercialise the Design System
+    itself, except as permitted by Section 3;
+(c) remove or alter any copyright, attribution or licence notice in the
+    Design System, including notices for Third-Party Components;
+(d) use the names or logos of Archangel, The Archangel Interactive or
+    Handcrafted Technologies, or any brand assets not included in this
+    repository, except to identify the origin of the Design System or as
+    Archangel separately permits in writing; or
+(e) use the Design System to create or offer a design system, component
+    library or similar product to third parties.
+
+
+5. THIRD-PARTY COMPONENTS
+
+This Agreement does not apply to Third-Party Components. They remain licensed
+under their own terms, including where they are embedded in the Design System
+or in a Deliverable, and nothing in this Agreement limits the rights those
+terms give you or removes the notices they require you to keep. Fonts in the
+fonts/ directory are licensed under the SIL Open Font License, Version 1.1,
+and must not be distributed under any other license.
+
+
+6. OWNERSHIP
+
+Archangel or its licensors own all right, title and interest in the Design
+System, including all intellectual property rights in it. "Intellectual
+property rights" means all rights under patent, copyright, trade secret,
+trademark and any other proprietary rights law.
+
+Archangel reserves all rights not expressly granted in this Agreement. You
+must not take any action that jeopardises or interferes with Archangel's or
+its licensors' ownership of the Design System.
+
+This Agreement does not change who owns a Deliverable as between the
+Group and a Client, which is governed by their own agreements. The
+Design System incorporated in a Deliverable remains owned by Archangel and
+licensed under this Agreement.
+
+Contributions to the Design System made by members of the Group
+belong to Archangel, or are licensed to Archangel on a perpetual, worldwide,
+royalty-free basis, so that they can be included in the Design System.
+
+
+7. TERM AND TERMINATION
+
+This Agreement continues until terminated. Archangel may terminate it for a
+member of the Group that breaches it, or if Archangel stops making
+the Design System available. A company that ceases to be a subsidiary or
+affiliate of Archangel loses the rights in Section 2 for new work from that
+date. You may stop using the Design System at any time.
+
+When the rights in Section 2 end for you, you must stop using the Design
+System and delete your copies of it, except where it is incorporated in a
+Deliverable delivered before that date. Sections 3 (for those Deliverables),
+5, 6, 8, 9 and 10 continue after termination.
+
+
+8. NO WARRANTY
+
+The Design System is provided "as is" and "with all faults". To the maximum
+extent permitted by law, Archangel and its licensors disclaim all
+representations, warranties and guarantees, whether express, implied or
+statutory, including implied warranties of merchantability, title,
+non-infringement and fitness for a particular purpose.
+
+Archangel makes no representation that the Design System is reliable,
+accurate or complete, that it will meet your requirements, or that its use
+will be secure, uninterrupted or error-free, including in any Deliverable.
+
+
+9. LIMITATION OF LIABILITY
+
+To the maximum extent permitted by law, Archangel is not liable for any loss
+of profits, revenue, business, use or data, interruption of business, or any
+indirect, special, incidental, consequential or punitive damages, however
+caused and whether in contract, tort (including negligence), strict
+liability or otherwise, even if told they were possible.
+
+To the maximum extent permitted by law, Archangel's total liability under
+this Agreement will not exceed the amount paid for the Design System.
+
+You are responsible for your Deliverables, for your use of the Design System
+in them, and for your compliance with this Agreement. These limitations apply
+to the maximum extent permitted by law and do not limit any statutory rights
+that cannot be limited by agreement.
+
+
+10. GENERAL
+
+This Agreement is governed by the laws of Kenya. Any dispute arising from it
+will be resolved in [FORUM / VENUE - TO BE CONFIRMED BY COUNSEL].
+
+This Agreement is the entire agreement about the Design System between you
+and Archangel. If a provision is unenforceable, the rest continues in effect.
+A failure to enforce a provision is not a waiver of it. Nothing in this
+Agreement limits Archangel's right to seek equitable relief.
