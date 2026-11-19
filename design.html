@@ -418,19 +418,102 @@
               </div>
             </div>
             <div class="swatch">
-              <div class="swatch-color" style="background-color: var(--color-focus)"></div>
-              <div class="swatch-label">
-                <span class="swatch-name">--color-focus</span>
-                <span class="swatch-value">#1a56db / #7eb3f8</span>
-              </div>
-            </div>
-            <div class="swatch">
               <div class="swatch-color" style="background-color: var(--color-hover)"></div>
               <div class="swatch-label">
                 <span class="swatch-name">--color-hover</span>
                 <span class="swatch-value">#e8e5e0 / #2a4535</span>
               </div>
             </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background-color: var(--color-focus)"></div>
+              <div class="swatch-label">
+                <span class="swatch-name">--color-focus</span>
+                <span class="swatch-value">#1a56db / #7eb3f8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-subsection">
+          <p class="ds-subsection-title">Semantic status</p>
+          <p style="color: var(--color-text-2); font-size: 0.8rem; margin-bottom: 1rem;">
+            Each status has three tokens: foreground · surface · on-surface text.
+          </p>
+
+          <!-- Success -->
+          <div class="status-group">
+          <p class="status-group-label">Success</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-success);">
+              <span style="color: var(--color-on-success);">Aa</span>
+              <span style="color: var(--color-on-success);">--color-success</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-success-bg);">
+              <span style="color: var(--color-success);">Aa</span>
+              <span style="color: var(--color-success);">--color-success-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-success);">
+              <span style="color: var(--color-on-success); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-success);">--color-on-success</span>
+            </div>
+          </div>
+          </div>
+
+          <!-- Error -->
+          <div class="status-group">
+          <p class="status-group-label">Error</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-error);">
+              <span style="color: var(--color-on-error);">Aa</span>
+              <span style="color: var(--color-on-error);">--color-error</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-error-bg);">
+              <span style="color: var(--color-error);">Aa</span>
+              <span style="color: var(--color-error);">--color-error-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-error);">
+              <span style="color: var(--color-on-error); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-error);">--color-on-error</span>
+            </div>
+          </div>
+          </div>
+
+          <!-- Warning -->
+          <div class="status-group">
+          <p class="status-group-label">Warning</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-warning);">
+              <span style="color: var(--color-on-warning);">Aa</span>
+              <span style="color: var(--color-on-warning);">--color-warning</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-warning-bg);">
+              <span style="color: var(--color-warning);">Aa</span>
+              <span style="color: var(--color-warning);">--color-warning-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-warning);">
+              <span style="color: var(--color-on-warning); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-warning);">--color-on-warning</span>
+            </div>
+          </div>
+          </div>
+
+          <!-- Info -->
+          <div class="status-group">
+          <p class="status-group-label">Info</p>
+          <div class="status-trio">
+            <div class="status-trio-cell" style="background-color: var(--color-info);">
+              <span style="color: var(--color-on-info);">Aa</span>
+              <span style="color: var(--color-on-info);">--color-info</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-info-bg);">
+              <span style="color: var(--color-info);">Aa</span>
+              <span style="color: var(--color-info);">--color-info-bg</span>
+            </div>
+            <div class="status-trio-cell" style="background-color: var(--color-info);">
+              <span style="color: var(--color-on-info); font-size: 1rem;">Aa</span>
+              <span style="color: var(--color-on-info);">--color-on-info</span>
+            </div>
+          </div>
           </div>
         </div>
 
@@ -479,89 +562,6 @@
                 <span class="swatch-value">#29331a</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="ds-subsection">
-          <p class="ds-subsection-title">Semantic status</p>
-          <p style="color: var(--color-text-2); font-size: 0.8rem; margin-bottom: 1rem;">
-            Each status has three tokens: foreground · surface · on-surface text.
-          </p>
-
-          <!-- Success -->
-          <div class="status-group">
-          <p class="status-group-label">Success</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-success);">
-              <span style="color: var(--color-on-success);">Aa</span>
-              <span style="color: var(--color-on-success);">--color-success</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-success-bg);">
-              <span style="color: var(--color-success);">Aa</span>
-              <span style="color: var(--color-success);">--color-success-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-success);">
-              <span style="color: var(--color-on-success); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-success);">--color-on-success</span>
-            </div>
-          </div>
-
-          </div>
-          <!-- Error -->
-          <div class="status-group">
-          <p class="status-group-label">Error</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-error);">
-              <span style="color: var(--color-on-error);">Aa</span>
-              <span style="color: var(--color-on-error);">--color-error</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-error-bg);">
-              <span style="color: var(--color-error);">Aa</span>
-              <span style="color: var(--color-error);">--color-error-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-error);">
-              <span style="color: var(--color-on-error); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-error);">--color-on-error</span>
-            </div>
-          </div>
-
-          </div>
-          <!-- Warning -->
-          <div class="status-group">
-          <p class="status-group-label">Warning</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-warning);">
-              <span style="color: var(--color-on-warning);">Aa</span>
-              <span style="color: var(--color-on-warning);">--color-warning</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-warning-bg);">
-              <span style="color: var(--color-warning);">Aa</span>
-              <span style="color: var(--color-warning);">--color-warning-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-warning);">
-              <span style="color: var(--color-on-warning); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-warning);">--color-on-warning</span>
-            </div>
-          </div>
-
-          </div>
-          <!-- Info -->
-          <div class="status-group">
-          <p class="status-group-label">Info</p>
-          <div class="status-trio">
-            <div class="status-trio-cell" style="background-color: var(--color-info);">
-              <span style="color: var(--color-on-info);">Aa</span>
-              <span style="color: var(--color-on-info);">--color-info</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-info-bg);">
-              <span style="color: var(--color-info);">Aa</span>
-              <span style="color: var(--color-info);">--color-info-bg</span>
-            </div>
-            <div class="status-trio-cell" style="background-color: var(--color-info);">
-              <span style="color: var(--color-on-info); font-size: 1rem;">Aa</span>
-              <span style="color: var(--color-on-info);">--color-on-info</span>
-            </div>
-          </div>
           </div>
         </div>
       </section>

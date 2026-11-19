@@ -74,18 +74,10 @@
     --color-default:       #333b3c;
     --color-disabled:      #9a9896;
     --color-disabled-bg:   #d4d2ce;
-    --color-focus:         #1a56db;
     --color-hover:         #e8e5e0;
+    --color-focus:         #1a56db;
 
-    /* Brand */
-    --color-primary:       #aad56a;
-    --color-on-primary:    #29331a;
-    --color-secondary:     #29331a;
-    --color-on-secondary:  #fcf9fe;
-    --color-accent:        #d6cd6b;
-    --color-on-accent:     #29331a;
-
-    /* Semantic status colors */
+    /* Semantic status */
     --color-success:       #1a7a4a;
     --color-success-bg:    #d8f3e5;
     --color-on-success:    #fcf9fe;
@@ -98,6 +90,14 @@
     --color-info:          #0369a1;
     --color-info-bg:       #e0f2fe;
     --color-on-info:       #fcf9fe;
+
+    /* Brand */
+    --color-primary:       #aad56a;
+    --color-on-primary:    #29331a;
+    --color-secondary:     #29331a;
+    --color-on-secondary:  #fcf9fe;
+    --color-accent:        #d6cd6b;
+    --color-on-accent:     #29331a;
   }
 }
 
@@ -128,18 +128,10 @@
     --color-default:       #efefec;
     --color-disabled:      #5a5a58;
     --color-disabled-bg:   #2a3a30;
-    --color-focus:         #7eb3f8;
     --color-hover:         #2a4535;
+    --color-focus:         #7eb3f8;
 
-    /* Brand */
-    --color-primary:       #aad56a;
-    --color-on-primary:    #29331a;
-    --color-secondary:     #fcf9fe;
-    --color-on-secondary:  #29331a;
-    --color-accent:        #d6cd6b;
-    --color-on-accent:     #29331a;
-
-    /* Semantic status colors */
+    /* Semantic status */
     --color-success:       #1a7a4a;
     --color-success-bg:    #052e16;
     --color-on-success:    #fcf9fe;
@@ -152,6 +144,14 @@
     --color-info:          #0369a1;
     --color-info-bg:       #0a1e2e;
     --color-on-info:       #fcf9fe;
+
+    /* Brand */
+    --color-primary:       #aad56a;
+    --color-on-primary:    #29331a;
+    --color-secondary:     #fcf9fe;
+    --color-on-secondary:  #29331a;
+    --color-accent:        #d6cd6b;
+    --color-on-accent:     #29331a;
   }
 }
 
