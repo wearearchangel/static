@@ -49,20 +49,22 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --color-base:         #222222;
+
     /* Text */
     --color-text:          #333b3c;
     --color-text-2:        darkslategray;
-    --color-title:         black;
+    --color-title:         #222222;
 
     /* Surfaces */
-    --color-background:    #efedea;
-    --color-background-2:  white;
-    --color-tint:          #f5f3ef;
-    --color-dim:           #eceae5;
+    --color-background:    #fcf9fe;
+    --color-background-2:  #ffffff;
+    --color-tint:          color-mix(in oklab, var(--color-base) 10%, transparent);
+    --color-dim:           color-mix(in oklab, var(--color-base) 5%, transparent);
 
     /* Borders */
-    --color-border:        #c8c4ba;
-    --color-border-muted:  #dddbd2;
+    --color-border:  color-mix(in oklab, var(--color-base) 15%, transparent);
+    --color-border-muted:  color-mix(in oklab, var(--color-base) 7.5%, transparent);
 
     /* Links */
     --color-link:          #1a56db;
@@ -101,20 +103,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-base:         #fcf9fe;
+
     /* Text */
     --color-text:          #efefec;
     --color-text-2:        lightgray;
-    --color-title:         white;
+    --color-title:         #fcf9fe;
 
     /* Surfaces */
-    --color-background:    #223a2c;
-    --color-background-2:  black;
-    --color-tint:          #1c3023;
-    --color-dim:           #182a1e;
+    --color-background:    #222222;
+    --color-background-2:  #000000;
+    --color-tint:          color-mix(in oklab, var(--color-base) 10%, transparent);
+    --color-dim:           color-mix(in oklab, var(--color-base) 5%, transparent);
 
     /* Borders */
-    --color-border:        #4a6741;
-    --color-border-muted:  #3a5233;
+    --color-border:  color-mix(in oklab, var(--color-base) 15%, transparent);
+    --color-border-muted:  color-mix(in oklab, var(--color-base) 7.5%, transparent);
 
     /* Links */
     --color-link:          #7eb3f8;
