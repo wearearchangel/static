@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Handcrafted Design is The Archangel Interactive's in-house design system for building beautiful identities, experiences and products."
+    />
+    <title>Handcrafted Design System</title>
+
+    <link
+      rel="preload"
+      href="/fonts/hubot-sans.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="/fonts/mona-sans.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/design/assets/docs.css" />
+  </head>
+  <body>
+    <header role="banner" style="margin: 3rem 0 0">
+      <h1>Handcrafted Design System</h1>
+      <p>
+        A <b>minimal baseline stylesheet</b> maintained by Handcrafted
+        Technologies, an Archangel Interactive Tech Company. Covers settings,
+        reset, typography, and element defaults - the base layer for you to
+        customise with less override and more extensibility.
+      </p>
+      <ul>
+        <li>
+          Semantic CSS custom properties (<code>--color-*</code>,
+          <code>--font-*</code>)
+        </li>
+        <li>Mona Sans &amp; Hubot Sans variable fonts</li>
+        <li>Light and dark mode via <code>prefers-color-scheme</code></li>
+        <li>Two entry points: standard and Tailwind v4</li>
+      </ul>
+    </header>
+
+    <nav role="navigation" style="margin: 2rem 0">
+      <ul>
+        <li>
+          <a href="/design/reference/">Reference</a> - tokens, typography and
+          components
+        </li>
+        <li>
+          <a href="/design/elements/">Elements</a> - the baseline applied to
+          every HTML element
+        </li>
+      </ul>
+    </nav>
+
+    <main role="main">
+      <section class="ds-section" id="usage">
+        <h2 class="ds-section-title">Usage</h2>
+
+        <div class="ds-subsection">
+          <h3>Standard usage</h3>
+          <p>Link in your <code>&lt;head&gt;</code> element:</p>
+          <pre class="usage-snippet">
+&lt;link rel="stylesheet" href="https://static.wearearchangel.com/styles/main.css"&gt;</pre>
+          <p>Or import in your CSS:</p>
+          <pre class="usage-snippet">
+@import url('https://static.wearearchangel.com/styles/main.css');</pre>
+        </div>
+
+        <div class="ds-subsection">
+          <h3>Tailwind v4 usage</h3>
+          <p>
+            Use <code>main.tailwind.css</code> as your CSS entry point passed to
+            the Tailwind CLI or Vite plugin. It imports Tailwind, registers all
+            design system tokens in <code>@theme</code>, and restores the brand
+            baseline in <code>@layer base</code>:
+          </p>
+          <pre class="usage-snippet">
+@import url('https://static.wearearchangel.com/styles/main.tailwind.css');</pre>
+          <p>
+            Then extend with your own <code>@theme</code> tokens and
+            <code>@layer components</code> rules.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <hr />
+      <p>
+        <small>
+          Handcrafted Design System by Handcrafted Technologies. Based on
+          <a href="https://git.sr.ht/~bt/vanilla-css">vanilla-css</a> by Bradley
+          Taunt.
+        </small>
+      </p>
+    </footer>
+  </body>
+</html>

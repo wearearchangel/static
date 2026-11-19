@@ -15,8 +15,14 @@ frontend:
       headers:
         - key: Access-Control-Allow-Origin
           value: "*"
-    # HTML — always revalidate so consumers get the latest showcase
-    - pattern: "index.html"
+    # HTML — always revalidate so consumers get the latest docs (any depth)
+    - pattern: "**/*.html"
+      headers:
+        - key: Cache-Control
+          value: no-cache
+    # Docs pages are served as directory URLs (/design/reference/), which
+    # have no .html in the request path, so match the tree explicitly
+    - pattern: "design/**"
       headers:
         - key: Cache-Control
           value: no-cache
